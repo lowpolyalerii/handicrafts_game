@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
 public class CameraEdgePan : MonoBehaviour
 {
+
     [SerializeField] float panSpeed;
     [SerializeField] float edgeSizeInPixels;  // How many pixels away from the edge of the screen the mouse can be before panning begins
 
@@ -25,4 +27,5 @@ public class CameraEdgePan : MonoBehaviour
     }
 
     void PanCameraInDirection(Vector2 direction) => transform.Translate(direction * panSpeed * Time.deltaTime);
+
 }
