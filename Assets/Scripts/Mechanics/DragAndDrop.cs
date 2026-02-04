@@ -5,31 +5,19 @@ using UnityEngine;
 
 public class DragAndDrop : MonoBehaviour
 {
+    Vector3 mousePosition;
 
-    Rigidbody rb;
-
-    void Start()
+    private Vector3 GetMousePos()
     {
-
-        rb = GetComponent<Rigidbody>();
+        return Camera.main.WorldToScreenPoint(transform.position);
     }
 
+    private void OnMouseDown()
+    {
+        mousePosition = Input.mousePosition - GetMousePos();
+    }
     private void OnMouseDrag()
     {
-        Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z);
-
-        Vector3 objPosition = Camera.main.ScreenToWorldPoint(mousePosition);
-
-        transform.position = objPosition;
-
-        rb.isKinematic = true;
-
+        transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition - mousePosition);
     }
-
-    private void OnMouseUp()
-    {
-        rb.isKinematic = false;
-    }
-
-
 }
