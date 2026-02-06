@@ -17,11 +17,11 @@ public class CameraPanDrag : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(2))
+        if (Input.GetMouseButtonDown(2))
         {
             touchStart = GetWorldPosition(groundZ);
         }
-        if (Input.GetMouseButton(2))
+        if (Input.GetMouseButtonUp(2))
         {
             Vector3 direction = touchStart - GetWorldPosition(groundZ);
             Camera.main.transform.position += direction;
