@@ -3,6 +3,12 @@ using UnityEngine;
 public class DragAndDrop : MonoBehaviour
 {
     Vector3 mousePosition;
+    Rigidbody rb;
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
 
     private Vector3 GetMousePos()
     {
@@ -15,6 +21,6 @@ public class DragAndDrop : MonoBehaviour
     }
     private void OnMouseDrag()
     {
-        transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition - mousePosition);
+        rb.MovePosition(Camera.main.ScreenToWorldPoint(Input.mousePosition - mousePosition)); //making obj clip
     }
 }
