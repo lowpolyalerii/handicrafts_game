@@ -6,25 +6,24 @@ using UnityEngine;
 public class UIHover : MonoBehaviour {
 
     [SerializeField] private GameObject containerGameObject;
-    [SerializeField] private NPCTalk npcTalk;
+    [SerializeField] private NPCTalk npcInteract;
 
-    // doesn't work rn
     private void Update()
     {
-        /* this doesnt work yet
-        if (NPCTalk() != null)
+
+        if (npcInteract.trigger)
         {
             Show();
         } else
         {
             Hide();
         }
-        */
     }
 
     public void Show()
     {
         containerGameObject.SetActive(true);
+
     }
 
     public void Hide()
