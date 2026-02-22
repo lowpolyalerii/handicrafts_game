@@ -14,27 +14,21 @@ public class NPCTalk : MonoBehaviour
                 Debug.Log("Interacted with!"); //remove later
                 trigger = true;
             }
-            // Debug.Log($"trigger={trigger}");
         }
 
 
         if (Input.GetKeyUp(KeyCode.E))
         {
             // (dialogue);
+            // if dialogue triggered hide e icon while talking
         }
     }
 
     public void OnMouseExit()
     {
         trigger = false;
-        // Debug.Log($"trigger={trigger}");
-    }
-
-    /*public NPCDialogue GetInteractableObject()
-    {
 
     }
-    */
 }
 
 

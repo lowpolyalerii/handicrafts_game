@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -23,7 +24,6 @@ public class UIHover : MonoBehaviour {
     public void Show()
     {
         containerGameObject.SetActive(true);
-
     }
 
     public void Hide()
