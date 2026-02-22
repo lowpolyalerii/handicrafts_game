@@ -24,6 +24,7 @@ public class Dialogue : MonoBehaviour
             if (textComponent.text == lines[index])
             {
                 NextLine();
+                // e appear when sentence finished
             }
             else
             {
