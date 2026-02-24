@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class NPCTalk : MonoBehaviour
 {
+    //DollDialogue dollDialogue;
     public bool trigger;
 
     public void OnMouseEnter() {
@@ -15,19 +16,11 @@ public class NPCTalk : MonoBehaviour
                 trigger = true;
             }
         }
-
-
-        if (Input.GetKeyUp(KeyCode.E))
-        {
-            // (dialogue);
-            // if dialogue triggered hide e icon while talking
-        }
     }
 
     public void OnMouseExit()
     {
         trigger = false;
-
     }
 }
 

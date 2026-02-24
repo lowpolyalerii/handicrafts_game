@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class DollDialogue : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public NPCTalk npcTalk;
+
+    public void Update()
     {
-        
+        if (npcTalk.trigger == true)
+        {
+            if (Input.GetKeyUp(KeyCode.E))
+            {
+                Debug.Log("Dialogue works!");
+            }
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }
