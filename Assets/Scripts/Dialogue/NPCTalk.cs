@@ -7,6 +7,11 @@ public class NPCTalk : MonoBehaviour
     //DollDialogue dollDialogue;
     public bool trigger;
 
+    public void Start()
+    {
+        trigger = false;
+    }
+
     public void OnMouseEnter() {
         {
             float interactRange = 2f;
