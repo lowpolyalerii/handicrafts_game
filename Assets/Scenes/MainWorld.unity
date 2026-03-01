@@ -1921,7 +1921,7 @@ GameObject:
   - component: {fileID: 993243003}
   - component: {fileID: 993243002}
   m_Layer: 5
-  m_Name: FirstDialogue
+  m_Name: Dialogue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2160,7 +2160,7 @@ GameObject:
   - component: {fileID: 1277741035}
   - component: {fileID: 1277741034}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: DollText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2848,7 +2848,6 @@ GameObject:
   - component: {fileID: 1671494624}
   - component: {fileID: 1671494626}
   - component: {fileID: 1671494625}
-  - component: {fileID: 1671494627}
   m_Layer: 5
   m_Name: DialogueBox
   m_TagString: Untagged
@@ -2915,25 +2914,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1671494623}
   m_CullTransparentMesh: 1
---- !u!114 &1671494627
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1671494623}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27f21d52a647c994cb8c78185f2a4736, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textComponent: {fileID: 1277741034}
-  lines:
-  - Oh? You're already back? Nice to see you again!
-  - I hate when you're gone for too long.
-  - What would you like to do today? Take in the scenery? Explore?
-  - Just remember to talk to your friends to see if they need anything.
-  textSpeed: 0.04
 --- !u!1 &1705893750 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 700474869040465935, guid: 0b4a1440743a2e14e999a83c27073756,
@@ -2964,6 +2944,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d945c8b87fbb2e343b56dae27f737874, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  npcTalk: {fileID: 217687899}
+--- !u!114 &1705893769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705893750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b5959e802731d44b81cb9fe69fd66da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canChat: 0
+  canvas: {fileID: 993243000}
+  textComponent: {fileID: 1277741034}
+  lines:
+  - Oh? You're already back? Nice to see you again!
+  - I hate when you're gone for too long.
+  - What would you like to do today? Take in the scenery? Explore?
+  - Just remember to talk to your friends to see if they need anything.
+  textSpeed: 0.05
   npcTalk: {fileID: 217687899}
 --- !u!1 &1830461196
 GameObject:
@@ -3394,7 +3396,12 @@ PrefabInstance:
     - target: {fileID: 1675739502475481865, guid: 0b4a1440743a2e14e999a83c27073756,
         type: 3}
       propertyPath: m_Constraints
-      value: 112
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675739502475481865, guid: 0b4a1440743a2e14e999a83c27073756,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1675739502475481865, guid: 0b4a1440743a2e14e999a83c27073756,
         type: 3}
@@ -3491,6 +3498,10 @@ PrefabInstance:
         type: 3}
       insertIndex: 6
       addedObject: {fileID: 1705893756}
+    - targetCorrespondingSourceObject: {fileID: 700474869040465935, guid: 0b4a1440743a2e14e999a83c27073756,
+        type: 3}
+      insertIndex: 7
+      addedObject: {fileID: 1705893769}
   m_SourcePrefab: {fileID: 100100000, guid: 0b4a1440743a2e14e999a83c27073756, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
