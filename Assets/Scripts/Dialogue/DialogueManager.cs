@@ -24,7 +24,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        if (npcTalk.trigger == true)
+        if (npcTalk)
         {
             if (Input.GetKeyUp(KeyCode.E))
             {
