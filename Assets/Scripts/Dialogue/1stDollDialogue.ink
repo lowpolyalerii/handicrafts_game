@@ -1,21 +1,26 @@
 Oh? You're already back? Nice to see you again!
 
-OLO
-
-Anyways
-
-LOL
-
 ->My_Choices
 
 == My_Choices ==
-* [This world is so much better than the other one.] -> ThisWorld
-* [...] -> Dot
+* [ This world is so much better than the other one. ] -> ThisWorld
+* [ ... ] -> Dot
 
 == ThisWorld ==
-[Wow, yeah! You can be with us all the time, right? Why aren't you here more?]
--> DONE
+Wow, yeah! You can be with us all the time, right? Why aren't you here more?
+-> My_Choices2
 
 == Dot ==
-[Oh, not feeling so well? I can cheer you up!]
+Oh, not feeling so well? I can cheer you up!
+-> DONE
+
+== My_Choices2 ==
+* [ I have to go to school. ] -> Ask_Help
+* [ I don't know... ] -> Ask_Help
+
+== Ask_Help ==
+Well, anyways. I do need your help!
+
+I'd love for you to braid my hair again, like last time. 
 -> END
+

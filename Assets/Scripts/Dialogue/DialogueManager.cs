@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Ink.Runtime;
 using TMPro;
+using UnityEngine.UI;
+using System;
 
 
 public class DialogueManager : MonoBehaviour
@@ -12,6 +14,11 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI Name;
     public GameObject canvas;
     public NPCTalk npcTalk;
+    public Button[] choiceButtons;
+    private int index;
+    public float textSpeed;
+    [SerializeField] public CameraEdgePan cameraEdgePan;
+    public bool trigger;
 
     private Story story;
 
@@ -24,35 +31,66 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        if (npcTalk)
-        {
-            if (Input.GetKeyUp(KeyCode.E))
+        if ((Input.GetKeyUp(KeyCode.E)) && npcTalk.trigger == true)
             {
                 ContinueStory();
             }
 
-        }
     }
+
+
     // Update is called once per frame
-    void ContinueStory()
+    public void ContinueStory()
     {
         if (story.canContinue)
         {
-            canvas.gameObject.SetActive(true);
+            trigger = true;
+            cameraEdgePan.enabled = false;
+            canvas.SetActive(true);
             textBox.gameObject.SetActive(true);
             textBox.text = story.Continue();
+            ShowChoices();
         }
-
         else
         {
             FinishDialogue();
         }
     }
 
-    private void FinishDialogue()
+
+
+    private void ShowChoices()
     {
-        textBox.gameObject.SetActive (false);
-        canvas.gameObject.SetActive(false);
+        List<Choice> choices = story.currentChoices;
+        int index = 0;
+        foreach (Choice c in choices)
+        {
+            choiceButtons[index].GetComponentInChildren<TextMeshProUGUI>().text = c.text;
+            choiceButtons[index].gameObject.SetActive(true);
+            index++;
+        }
+        for(int i = index; i < 2; i++)
+        {
+            choiceButtons[i].gameObject.SetActive(false);
+        }
     }
 
+    public void SetDecision(int choiceIndex)
+    {
+        story.ChooseChoiceIndex(choiceIndex);
+        ContinueStory();
+    }
+
+    private void FinishDialogue()
+        {
+        cameraEdgePan.enabled = true;
+        trigger = false;
+        StopAllCoroutines();
+            textBox.gameObject.SetActive(false);
+            canvas.SetActive(false);
+            for (int i = 0; i < choiceButtons.Length; i++)
+            {
+                choiceButtons[i].gameObject.SetActive(false);
+            }
+        }
 }

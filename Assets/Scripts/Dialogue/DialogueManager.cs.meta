@@ -3,7 +3,12 @@ guid: 5dd5dd0de23cf964f82ba774f9170639
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - inkFile: {instanceID: 0}
+  - textBox: {instanceID: 0}
+  - Name: {instanceID: 0}
+  - canvas: {instanceID: 0}
+  - npcTalk: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
