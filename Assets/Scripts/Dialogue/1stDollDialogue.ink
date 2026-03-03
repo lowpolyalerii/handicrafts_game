@@ -19,7 +19,7 @@ Oh, not feeling so well? I can cheer you up!
 * [ I don't know... ] -> Ask_Help
 
 == Ask_Help ==
-Well, anyways. I do need your help!
+Well, anyway. I do need your help!
 
 I'd love for you to braid my hair again, like last time. 
 -> END
