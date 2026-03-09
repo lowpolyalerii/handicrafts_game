@@ -1,34 +1,62 @@
 Oh? You're already back? Nice to see you again!
 
+I get sad when you're gone for too long.
+
+Are you doing anything in particular today?
+
 ->My_Choices
 
 == My_Choices ==
 * [ This world is so much better than the other one. ] -> ThisWorld
-* [ ... ] -> Dot
+* [ I don't feel so good today. ] -> Dot
 
 == ThisWorld ==
 Wow, yeah! You can be with us all the time, right? Why aren't you here more?
 -> My_Choices2
 
 == Dot ==
-Oh, not feeling so well? I can cheer you up!
+Oh... I'm sorry to hear that. Hopefully, I can cheer you up!
 
-I mean, why aren't you here more anyways?
+I know you're here a lot anyway, but I wish I saw you even more.
 -> My_Choices2
 
 == My_Choices2 ==
-* [ I have to go to school. ] -> Ask_Help
-* [ I don't know... ] -> Ask_Help
+* [ My parents say I have to go to school. ] -> Ask_Help
+* [ I wish I could too. ] -> Ask_Help
 
 == Ask_Help ==
-Well, anyway. I do need your help!
+School... you've never told me about that.
 
-I'd love for you to braid my hair again, like last time.
-->DONE
+Well, anyway. I urgently need your help! Like MAJOR help!
+
+I'm getting super bored of my hairstyle... I want something fun or cute.
+
+Can you braid my hair again?
+->Interact
 
 == Interact ==
-* [ What style would you like? ] -> ThisWorld
-* [ ... ] -> Dot
+* [ Of course! ] -> Braiding // quest popup
+* [ Give me a minute. ] -> Unsure
 
--> END
+== Braiding ==
+Would you like to start now?
 
+* [ Sure. ] -> YES
+* [ Not yet. ] -> NO
+
+== YES ==
+YAY! //Trigger minigame
+-> DONE
+
+== NO == 
+-> Unsure
+
+== Unsure ==
+Of course! Whenever you're ready, you know where I am!
+// add quest here 
+
+-> DONE
+
+== dd ==
+* Oh are you ready now?
+ ->END

@@ -32,10 +32,9 @@ public class DialogueManager : MonoBehaviour
     private void Update()
     {
         if ((Input.GetKeyUp(KeyCode.E)) && npcTalk.trigger == true)
-            {
-                ContinueStory();
-            }
-
+        {
+            ContinueStory();
+        }
     }
 
 
@@ -84,8 +83,8 @@ public class DialogueManager : MonoBehaviour
     private void FinishDialogue()
         {
         cameraEdgePan.enabled = true;
-        trigger = false;
-        StopAllCoroutines();
+        //trigger = false;
+        //StopAllCoroutines();
             textBox.gameObject.SetActive(false);
             canvas.SetActive(false);
             for (int i = 0; i < choiceButtons.Length; i++)
