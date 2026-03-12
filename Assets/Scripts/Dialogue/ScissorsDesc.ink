@@ -1,0 +1,1 @@
+These are my favourite scissors. I got them when I was very little, and I used them to create every craft in this world. If I lost these, I'd be really upset!
