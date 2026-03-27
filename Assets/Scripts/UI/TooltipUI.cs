@@ -1,34 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
+[ExecuteInEditMode()]
 public class TooltipUI : MonoBehaviour
 {
-    [SerializeField] private GameObject containerGameObject;
-    [SerializeField] private ObjectUIHover Object;
-    public bool trigger;
+    public TextMeshProUGUI headerField;
+
+    public TextMeshProUGUI contentField;
+
+    public LayoutElement layoutElement;
+
+    public int characterWrapLimit;
 
     private void Update()
     {
-        if ((Input.GetKeyUp(KeyCode.E)) && Object.trigger == true)
-        {
-            Show();
-        }
-        else
-        {
-            Hide();
-        }
-    }
+        int headerLength = headerField.text.Length;
+        int contentLength = contentField.text.Length;
 
-    public void Show()
-    {
-        containerGameObject.SetActive(true);
-    }
-
-    public void Hide()
-    {
-        containerGameObject.SetActive(false);
+        layoutElement.enabled = (headerLength > characterWrapLimit || contentLength > characterWrapLimit) ? true : false;
     }
 }
