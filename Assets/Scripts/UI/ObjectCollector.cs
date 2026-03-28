@@ -6,18 +6,19 @@ using TMPro;
 public class ObjectCollector : MonoBehaviour
 {
 
-    [SerializeField]
-    private int collected;
+    public int collected;
     public TextMeshProUGUI collectText;
-
+    public bool isCounting = false;
 
     private void Start()
     {
-        collected = 0;
+        isCounting = false;
     }
 
-    private void Update()
+    public void AddCount()
     {
-        collectText.text = collected.ToString();
+        isCounting = true;
+        collected++;
+        collectText.text = "Objects Collected: " + collected.ToString() + "/5";
     }
 }

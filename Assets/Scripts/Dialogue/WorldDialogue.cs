@@ -7,35 +7,38 @@ public class WorldDialogue : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
     public string[] lines;
-    public NPCTalk npcTalk;
-    public GameObject canvas;
     public float textSpeed;
+
     private int index;
+    public ObjectCollector OBJ;
+    public GameObject canvas;
 
-
+    // Start is called before the first frame update
     void Start()
     {
-        canvas.gameObject.SetActive(false);
         textComponent.text = string.Empty;
+        canvas.gameObject.SetActive(false);
     }
 
+    // Update is called once per frame
     void Update()
     {
-        if ((Input.GetKeyUp(KeyCode.E)) && npcTalk.trigger == true)
+        if (OBJ.collected == 1)
         {
-            canvas.SetActive(true);
             StartDialogue();
+            canvas.gameObject.SetActive(true);
 
-            if (textComponent.text == lines[index])
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                textComponent.text = string.Empty;
-                NextLine();
-                // e appear when sentence finished
-            }
-            else
-            {
-                StopAllCoroutines();
-                textComponent.text = lines[index];
+                if (textComponent.text == lines[index])
+                {
+                    NextLine();
+                }
+                else
+                {
+                    StopAllCoroutines();
+                    textComponent.text = lines[index];
+                }
             }
         }
     }
@@ -65,7 +68,20 @@ public class WorldDialogue : MonoBehaviour
         }
         else
         {
-            canvas.SetActive(false);
+            gameObject.SetActive(false);
         }
     }
 }
+
+//    public ObjectCollector OBJ;
+/*
+{
+    if (OBJ.collected == 1)
+    {
+        canvas.SetActive(true);
+        StartDialogue();
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+
+            */
