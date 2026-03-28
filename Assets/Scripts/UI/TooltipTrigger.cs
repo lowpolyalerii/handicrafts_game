@@ -10,6 +10,9 @@ public class TooltipTrigger : MonoBehaviour
     public bool mouseIn;
     public bool mouseOut;
 
+    public string header;
+    [Multiline()] public string content;
+
     public void Start()
     {
         display = false;
@@ -18,10 +21,8 @@ public class TooltipTrigger : MonoBehaviour
     public void Displaying()
     {
         if (display == true && mouseIn == true && mouseOut == false)
-        {
-            Debug.Log("Colliding");
-
-            TooltipSystem.Show();
+        {   
+            TooltipSystem.Show(content, header);
         }
 
         if(display == false && mouseIn == true && mouseOut == false)
