@@ -21,11 +21,21 @@ I know you're here a lot anyway, but I wish I saw you even more.
 -> My_Choices2
 
 == My_Choices2 ==
-* [ My parents say I have to go to school. ] -> Ask_Help
-* [ I wish I could too. ] -> Ask_Help
+* [ My parents say I have to go to school. ] -> Ask_Help1
+* [ I wish I could too. ] -> Ask_Help2
 
-== Ask_Help ==
+== Ask_Help1 ==
 School... you've never told me about that.
+
+Well, anyway. I urgently need your help! Like MAJOR help!
+
+I'm getting super bored of my hairstyle... I want something fun or cute.
+
+Can you braid my hair again?
+->Interact
+
+== Ask_Help2 ==
+Then what's the wait for?
 
 Well, anyway. I urgently need your help! Like MAJOR help!
 
