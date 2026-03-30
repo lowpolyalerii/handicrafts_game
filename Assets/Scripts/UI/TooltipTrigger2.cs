@@ -9,8 +9,9 @@ public class TooltipTrigger2 : MonoBehaviour
     public bool display;
     public bool mouseIn;
     public bool mouseOut;
+    public bool showing = false;
 
-    [SerializeField] AudioSource audioSource;
+    //[SerializeField] AudioSource audioSource;
 
     public string header;
     [Multiline()] public string content;
@@ -25,16 +26,19 @@ public class TooltipTrigger2 : MonoBehaviour
         if (display == true && mouseIn == true && mouseOut == false)
         {
             TooltipSystem2.Show(content, header);
+            showing = true;
         }
 
         if (display == false && mouseIn == true && mouseOut == false)
         {
             TooltipSystem2.Hide();
+            showing = false;
         }
 
         if (display == false && mouseIn == false && mouseOut == true)
         {
             TooltipSystem2.Hide();
+            showing = false;
         }
     }
 
@@ -48,7 +52,7 @@ public class TooltipTrigger2 : MonoBehaviour
                 if (mouseOut == false)
                 {
                     display = true;
-                    audioSource.Play();
+                    //audioSource.Play();
                 }
             }
 
