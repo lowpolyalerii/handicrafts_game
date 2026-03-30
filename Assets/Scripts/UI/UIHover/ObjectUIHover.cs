@@ -23,7 +23,6 @@ public class ObjectUIHover : MonoBehaviour
             Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange);
             foreach (Collider collider in colliderArray)
             {
-                Debug.Log("Scissors!"); //remove later
                 Object.trigger = true;
             }
         }
