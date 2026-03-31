@@ -20,7 +20,6 @@ public class TooltipSystem2 : MonoBehaviour
         if (current.tooltip2.gameObject.activeSelf == false)
         {
             current.tooltip2.gameObject.SetActive(true);
-            Debug.Log("Activated2");
         }
         current.tooltip2.SetText(content, header);
     }
@@ -30,7 +29,6 @@ public class TooltipSystem2 : MonoBehaviour
         if (current.tooltip2.gameObject.activeSelf == true)
         {
             current.tooltip2.gameObject.SetActive(false);
-            Debug.Log("WIIIIII");
         }
     }
 }
