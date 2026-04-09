@@ -19,6 +19,7 @@ public class TooltipTrigger5 : MonoBehaviour
     public void Start()
     {
         display = false;
+
     }
 
     public void Displaying()
@@ -52,7 +53,7 @@ public class TooltipTrigger5 : MonoBehaviour
                 if (mouseOut == false)
                 {
                     display = true;
-                    //audioSource.Play();
+                    //audioSource.GetComponent<AudioSource>().Play();
                 }
             }
 

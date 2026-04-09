@@ -52,7 +52,7 @@ public class TooltipTrigger4 : MonoBehaviour
                 if (mouseOut == false)
                 {
                     display = true;
-                    //audioSource.Play();
+                    //audioSource.GetComponent<AudioSource>().Play();
                 }
             }
 
