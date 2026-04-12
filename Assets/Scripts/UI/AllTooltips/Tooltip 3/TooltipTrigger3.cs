@@ -9,7 +9,6 @@ public class TooltipTrigger3 : MonoBehaviour
     public bool display;
     public bool mouseIn;
     public bool mouseOut;
-    public bool showing = false;
 
     //[SerializeField] AudioSource audioSource;
 
@@ -19,6 +18,8 @@ public class TooltipTrigger3 : MonoBehaviour
     public void Start()
     {
         display = false;
+        mouseIn = false;
+        mouseOut = true;
     }
 
     public void Displaying()
@@ -26,19 +27,16 @@ public class TooltipTrigger3 : MonoBehaviour
         if (display == true && mouseIn == true && mouseOut == false)
         {
             TooltipSystem3.Show(content, header);
-            showing = true;
         }
 
         if (display == false && mouseIn == true && mouseOut == false)
         {
             TooltipSystem3.Hide();
-            showing = false;
         }
 
         if (display == false && mouseIn == false && mouseOut == true)
         {
             TooltipSystem3.Hide();
-            showing = false;
         }
     }
 

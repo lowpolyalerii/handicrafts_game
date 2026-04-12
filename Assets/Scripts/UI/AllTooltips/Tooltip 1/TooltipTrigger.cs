@@ -11,6 +11,8 @@ public class TooltipTrigger : MonoBehaviour
     public bool mouseOut;
     public bool showing = false;
 
+
+
     //[SerializeField] AudioSource audioSource;
 
     public string header;
@@ -19,6 +21,8 @@ public class TooltipTrigger : MonoBehaviour
     public void Start()
     {
         display = false;
+        mouseIn = false;
+        mouseOut = true;
     }
 
     public void Displaying()
