@@ -10,7 +10,7 @@ public class TooltipTrigger2 : MonoBehaviour
     public bool mouseIn;
     public bool mouseOut;
 
-    //[SerializeField] AudioSource audioSource;
+    [SerializeField] AudioSource audioSource;
 
     public string header;
     [Multiline()] public string content;
@@ -52,7 +52,7 @@ public class TooltipTrigger2 : MonoBehaviour
                 if (mouseOut == false)
                 {
                     display = true;
-                    //audioSource.Play();
+                    audioSource.Play();
                 }
             }
 

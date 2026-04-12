@@ -21,7 +21,12 @@ public class ObjectCollector : MonoBehaviour
     {
         isCounting = false;
         collectText.enabled = false;
-    }
+        ScissorsFound = false;
+        PaperFound = false;
+        PenFound = false;
+        HairtieFound = false;
+        PlushieFound = false;
+}
 
     public void AddCount()
         {
