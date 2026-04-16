@@ -1,20 +1,20 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+using Unity.VisualScripting;
 
 public class DiaryTrigger : MonoBehaviour
 {
+    public GameObject DiaryEntry;
 
-    public Canvas canvas;
-
-    void Start()
+    public void WhenButtonClicked()
     {
-        // Turns the image off.
-        canvas.enabled = false;
+        if(DiaryEntry.activeInHierarchy == true)
+            DiaryEntry.SetActive(false);
+        else
+            DiaryEntry.SetActive(true);
     }
 
-    void OnMouseDown()
-    {
-        // Turns the image on if it is off, and off if it is on.
-        canvas.enabled = !canvas.enabled;
-    }
 }

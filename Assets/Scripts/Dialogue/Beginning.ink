@@ -5,8 +5,12 @@
  The door rattles -> My_Choices2
  
  == My_Choices2 ==
-* [ Test! ] -> Ask_Help
+* [ Test! ] -> Yamama
 * [ Test 2 !] -> Ask_Help
+
+== Yamama ==
+it workss jkdsjks
+-> END
 
 == Ask_Help ==
 it works!

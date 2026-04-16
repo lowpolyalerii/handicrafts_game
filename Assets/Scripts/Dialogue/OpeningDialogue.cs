@@ -100,7 +100,6 @@ public class OpeningDialogue : MonoBehaviour
 
     private void FinishDialogue()
     {
-        //trigger = false;
         StopAllCoroutines();
         textBox.gameObject.SetActive(false);
         canvas.gameObject.SetActive(false);

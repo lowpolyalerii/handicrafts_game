@@ -29,6 +29,7 @@ public class Collectable : MonoBehaviour
             }
         }
 
+
         if (!collector.PaperFound)
 
         {
@@ -54,6 +55,7 @@ public class Collectable : MonoBehaviour
             }
         }
 
+
         if (!collector.HairtieFound)
 
         {
@@ -77,7 +79,6 @@ public class Collectable : MonoBehaviour
                 FindAnyObjectByType<ObjectCollector>().AddCount();
                 audioSource.Play();
             }
-
 
         }
     }

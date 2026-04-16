@@ -2,38 +2,39 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
-public class WorldDialogue : MonoBehaviour
+public class BeginningScene : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
     public string[] lines;
     public float textSpeed;
+    public string sceneName;
 
     private int index;
-    public GameObject canvas;
 
+    // Start is called before the first frame update
     void Start()
     {
         textComponent.text = string.Empty;
+        StartDialogue();
     }
 
+    // Update is called once per frame
     void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            StartDialogue();
-            canvas.gameObject.SetActive(true);
-
-            if (Input.GetKeyDown(KeyCode.E))
+            if (textComponent.text == lines[index])
             {
-                if (textComponent.text == lines[index])
-                {
-                    NextLine();
-                }
-                else
-                {
-                    StopAllCoroutines();
-                    textComponent.text = lines[index];
-                }
+                NextLine();
             }
+            else
+            {
+                StopAllCoroutines();
+                textComponent.text = lines[index];
+            }
+        }
     }
 
     void StartDialogue()
@@ -61,20 +62,7 @@ public class WorldDialogue : MonoBehaviour
         }
         else
         {
-            gameObject.SetActive(false);
+            SceneManager.LoadScene(sceneName);
         }
     }
 }
-
-//    public ObjectCollector OBJ;
-/*
-{
-    if (OBJ.collected == 1)
-    {
-        canvas.SetActive(true);
-        StartDialogue();
-
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-
-            */
