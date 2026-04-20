@@ -5,7 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/Main Menu.unity
+    guid: f6f00a9d8f3690b47bf4bc4b99ea816c
+  - enabled: 1
+    path: Assets/Scenes/Beginning.unity
+    guid: cb7a69cff23ffa24e8b5fbdce1a04435
   - enabled: 1
     path: Assets/Scenes/MainWorld.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Hairbraiding.unity
+    guid: e71923208c093be48a784d351484af11
+  - enabled: 1
+    path: Assets/Scenes/BodyPainting.unity
+    guid: fd18594269eda4e4588c698c119b1acb
   m_configObjects: {}

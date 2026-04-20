@@ -9,6 +9,7 @@ public class BeginningScene : MonoBehaviour
     public TextMeshProUGUI textComponent;
     public string[] lines;
     public float textSpeed;
+   
     public string sceneName;
 
     private int index;

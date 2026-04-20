@@ -11,13 +11,15 @@ public class WorldDialogue : MonoBehaviour
 
     private int index;
     public GameObject canvas;
+    public ObjectCollector collector;
 
     void Start()
     {
         textComponent.text = string.Empty;
     }
 
-    void Update()
+    void Update(){
+        if (collector.collected.ToString() == "1")
         {
             StartDialogue();
             canvas.gameObject.SetActive(true);
@@ -34,6 +36,7 @@ public class WorldDialogue : MonoBehaviour
                     textComponent.text = lines[index];
                 }
             }
+        }
     }
 
     void StartDialogue()
@@ -65,16 +68,3 @@ public class WorldDialogue : MonoBehaviour
         }
     }
 }
-
-//    public ObjectCollector OBJ;
-/*
-{
-    if (OBJ.collected == 1)
-    {
-        canvas.SetActive(true);
-        StartDialogue();
-
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-
-            */

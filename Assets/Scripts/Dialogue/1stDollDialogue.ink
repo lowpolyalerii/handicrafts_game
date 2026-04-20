@@ -55,14 +55,15 @@ Would you like to start now?
 * [ Not yet. ] -> NO
 
 == YES ==
-YAY! //Trigger minigame
+(This mechanic is still being worked on!) //YAY! //Trigger minigame
 -> DONE
 
 == NO == 
 -> Unsure
 
 == Unsure ==
-Of course! Whenever you're ready, you know where I am!
+(This mechanic is still being worked on!)
+//Of course! Whenever you're ready, you know where I am!
 // add quest here 
 
 -> DONE
