@@ -11,6 +11,7 @@ public class ImageToggle : MonoBehaviour
     public GameObject Instructions;
     public RandomAudioPlay Audio;
     public GameObject OBJ;
+    public GameObject Settingsicon;
 
 
     void Start()
@@ -19,12 +20,13 @@ public class ImageToggle : MonoBehaviour
         image.gameObject.SetActive(false);
     }
 
-    public void PauseMenu()
+    public void ImageDisplaying()
     {
         imageActive = !imageActive;
         image.gameObject.SetActive(true);
 
         TooltipCanvases.gameObject.SetActive(false);
+        Settingsicon.gameObject.SetActive(false);
         Instructions.gameObject.SetActive(false);
         OBJ.gameObject.SetActive(false);
         cameraEdgePan.enabled = false;
@@ -32,11 +34,12 @@ public class ImageToggle : MonoBehaviour
 
         if (!imageActive)
         {
-            image.SetActive(false);
+            image.gameObject.SetActive(false);
             TooltipCanvases.gameObject.SetActive(true);
             Instructions.gameObject.SetActive(true);
             cameraEdgePan.enabled = true;
             OBJ.gameObject.SetActive(true);
+            Settingsicon.gameObject.SetActive(true);
             Audio.source.volume = 0.307f;
         }
 

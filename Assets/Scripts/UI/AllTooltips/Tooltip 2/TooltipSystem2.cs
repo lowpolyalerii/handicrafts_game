@@ -8,11 +8,15 @@ public class TooltipSystem2 : MonoBehaviour
 
     public TooltipUI tooltip2;
 
+    public static GameObject interactbutton;
+
 
     public void Awake()
     {
         current = this;
         current.tooltip2.gameObject.SetActive(false);
+        interactbutton = GameObject.Find("InteractButton");
+        interactbutton.gameObject.SetActive(false);
     }
 
     public static void Show(string content, string header = "")
@@ -20,6 +24,8 @@ public class TooltipSystem2 : MonoBehaviour
         if (current.tooltip2.gameObject.activeSelf == false)
         {
             current.tooltip2.gameObject.SetActive(true);
+            interactbutton.gameObject.SetActive(true);
+
         }
         current.tooltip2.SetText(content, header);
     }
@@ -29,6 +35,7 @@ public class TooltipSystem2 : MonoBehaviour
         if (current.tooltip2.gameObject.activeSelf == true)
         {
             current.tooltip2.gameObject.SetActive(false);
+            interactbutton.gameObject.SetActive(false);
         }
     }
 }
