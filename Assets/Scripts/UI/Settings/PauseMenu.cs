@@ -12,21 +12,40 @@ public class PauseMenu : MonoBehaviour
     public RandomAudioPlay Audio;
     public GameObject OBJ;
     public GameObject interactbutton;
+    GameObject[] taggedObjects = null;
 
     public bool isPaused;
+
+    void OnEnable()
+    {
+        string tag = "HoverUI";
+        taggedObjects = GameObject.FindGameObjectsWithTag(tag);
+        Debug.Log(taggedObjects);
+    }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            {
-                Paused();
-            }
+            OnPauseButton();
+        }
+    }
+
+    public void OnPauseButton()
+    {
+        if (!isPaused)
+        {
+            Paused();
+        }
+        else
+        {
+            Resume();
         }
     }
 
     public void Paused()
     {
+        isPaused = true;
         if (image.activeInHierarchy == true)
         {
             image.SetActive(false);
@@ -34,7 +53,7 @@ public class PauseMenu : MonoBehaviour
             TooltipCanvases.gameObject.SetActive(true);
             Instructions.gameObject.SetActive(true);
             OBJ.gameObject.SetActive(true);
-            interactbutton.gameObject.SetActive(true);
+            interactbutton.gameObject.SetActive(false);
             Time.timeScale = 1.0f;
             Audio.source.volume = 0.307f;
         }
@@ -50,20 +69,18 @@ public class PauseMenu : MonoBehaviour
             Time.timeScale = 0f;
             Audio.source.volume = 0f;
 
-            /*
-            // disables hoverUI but idk how to enable
-            string tag = "HoverUI"; // your tag
-            GameObject[] taggedObjects = GameObject.FindGameObjectsWithTag(tag);
+
             foreach (GameObject tagged in taggedObjects)
             {
-                tagged.SetActive(false); // or true
+                tagged.SetActive(false);
             }
-            */
+
         }
     }
 
     public void Resume()
     {
+        isPaused = false;
         image.SetActive(false);
         EdgePan.enabled = true;
         TooltipCanvases.gameObject.SetActive(true);
@@ -72,5 +89,9 @@ public class PauseMenu : MonoBehaviour
         interactbutton.gameObject.SetActive(false);
         Time.timeScale = 1.0f;
         Audio.source.volume = 0.307f;
+        foreach (GameObject tagged in taggedObjects)
+        {
+            tagged.SetActive(true);
+        }
     }
 }
