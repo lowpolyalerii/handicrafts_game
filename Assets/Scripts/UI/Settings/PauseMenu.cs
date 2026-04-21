@@ -11,6 +11,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject Instructions;
     public RandomAudioPlay Audio;
     public GameObject OBJ;
+    public GameObject interactbutton;
 
     public bool isPaused;
 
@@ -26,25 +27,50 @@ public class PauseMenu : MonoBehaviour
 
     public void Paused()
     {
-        isPaused = true;
-        Time.timeScale = 0f;
-
-        image.SetActive(!gameObject.activeInHierarchy);
-        TooltipCanvases.SetActive(!gameObject.activeInHierarchy);
-        Instructions.SetActive(!gameObject.activeInHierarchy);
-        OBJ.gameObject.SetActive(!gameObject.activeInHierarchy);
-
-        if (EdgePan.enabled == true)
+        if (image.activeInHierarchy == true)
         {
-            EdgePan.enabled = false;
-            Audio.source.volume = 0;
+            image.SetActive(false);
+            EdgePan.enabled = true;
+            TooltipCanvases.gameObject.SetActive(true);
+            Instructions.gameObject.SetActive(true);
+            OBJ.gameObject.SetActive(true);
+            interactbutton.gameObject.SetActive(true);
+            Time.timeScale = 1.0f;
+            Audio.source.volume = 0.307f;
         }
         else
         {
-            EdgePan.enabled = true;
-            isPaused = false;
-            Audio.source.volume = 0.307f;
-            Time.timeScale = 1.0f;
+            image.SetActive(true);
+            EdgePan.enabled = false;
+            TooltipCanvases.gameObject.SetActive(false);
+            Instructions.gameObject.SetActive(false);
+            OBJ.gameObject.SetActive(false);
+            interactbutton.gameObject.SetActive(false);
+
+            Time.timeScale = 0f;
+            Audio.source.volume = 0f;
+
+            /*
+            // disables hoverUI but idk how to enable
+            string tag = "HoverUI"; // your tag
+            GameObject[] taggedObjects = GameObject.FindGameObjectsWithTag(tag);
+            foreach (GameObject tagged in taggedObjects)
+            {
+                tagged.SetActive(false); // or true
+            }
+            */
         }
+    }
+
+    public void Resume()
+    {
+        image.SetActive(false);
+        EdgePan.enabled = true;
+        TooltipCanvases.gameObject.SetActive(true);
+        Instructions.gameObject.SetActive(true);
+        OBJ.gameObject.SetActive(true);
+        interactbutton.gameObject.SetActive(false);
+        Time.timeScale = 1.0f;
+        Audio.source.volume = 0.307f;
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class SettingsMenu : MonoBehaviour
 {
     public ImageToggle toggle;
+    public BlurController blur;
 
     //public GameObject Audio;
 
@@ -24,6 +25,7 @@ public class SettingsMenu : MonoBehaviour
     public void ExitButton()
     {
         toggle.ResumeGame();
+        blur._blurVolume.weight = blur._blurActive ? 0 : 0;
     }
 
     public void Instructions()

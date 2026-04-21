@@ -5,11 +5,11 @@ using UnityEngine.Rendering;
 
 public class BlurController : MonoBehaviour
 {
-    private Volume _blurVolume;
+    public Volume _blurVolume;
     public bool _blurActive;
 
 
-    void Start()
+    public void Start()
     {
         _blurVolume = GetComponent<Volume>();
         _blurActive = false;
@@ -19,6 +19,16 @@ public class BlurController : MonoBehaviour
     public void ToggleBlur()
     {
         _blurActive = !_blurActive; 
-        _blurVolume.weight = _blurActive ? 1 : 0;
+
+        if (_blurVolume.weight == 0)
+        {
+            _blurVolume.weight = 1;
+        }
+        else
+        {
+            _blurVolume.weight = 0;
+        }
+
+        //_blurVolume.weight = _blurActive ? 1 : 0;
     }
 }

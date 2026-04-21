@@ -262,7 +262,7 @@ GameObject:
   - component: {fileID: 20361147}
   m_Layer: 5
   m_Name: Text
-  m_TagString: Untagged
+  m_TagString: Tooltips
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -669,7 +669,7 @@ GameObject:
   - component: {fileID: 45958258}
   m_Layer: 5
   m_Name: Header
-  m_TagString: Untagged
+  m_TagString: Tooltips
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -1016,6 +1016,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggle: {fileID: 1054395656}
+  blur: {fileID: 508543397}
 --- !u!1 &68762913
 GameObject:
   m_ObjectHideFlags: 0
@@ -1086,7 +1087,7 @@ GameObject:
   - component: {fileID: 76602909}
   m_Layer: 5
   m_Name: Tooltip
-  m_TagString: Untagged
+  m_TagString: Tooltips
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -1908,6 +1909,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3af6fe68bf526e64f91293e91e562f71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _blurVolume: {fileID: 222131623}
   _blurActive: 0
 --- !u!1 &228903115
 GameObject:
@@ -2720,7 +2722,7 @@ GameObject:
   - component: {fileID: 336706209}
   m_Layer: 5
   m_Name: Tooltip2
-  m_TagString: Untagged
+  m_TagString: Tooltips
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -3222,7 +3224,7 @@ GameObject:
   - component: {fileID: 368978995}
   m_Layer: 5
   m_Name: Tooltip3
-  m_TagString: Untagged
+  m_TagString: Tooltips
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -3588,7 +3590,7 @@ GameObject:
   - component: {fileID: 391937300}
   m_Layer: 5
   m_Name: Tooltip Canvas 4
-  m_TagString: Untagged
+  m_TagString: Tooltips
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -3702,7 +3704,7 @@ GameObject:
   - component: {fileID: 392539989}
   m_Layer: 5
   m_Name: Text
-  m_TagString: Untagged
+  m_TagString: Tooltips
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -3957,7 +3959,7 @@ GameObject:
   - component: {fileID: 410760156}
   m_Layer: 5
   m_Name: Text
-  m_TagString: Untagged
+  m_TagString: Tooltips
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -4450,7 +4452,7 @@ GameObject:
   - component: {fileID: 449226167}
   m_Layer: 5
   m_Name: Text
-  m_TagString: Untagged
+  m_TagString: Tooltips
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -5011,6 +5013,70 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 497718806}
   m_CullTransparentMesh: 1
+--- !u!1 &508543395
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 508543396}
+  - component: {fileID: 508543398}
+  - component: {fileID: 508543397}
+  m_Layer: 5
+  m_Name: Blur2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &508543396
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508543395}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 334.9279, y: 346.76868, z: -941.0282}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &508543397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508543395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3af6fe68bf526e64f91293e91e562f71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _blurVolume: {fileID: 508543398}
+  _blurActive: 0
+--- !u!114 &508543398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508543395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 2
+  blendDistance: 0
+  weight: 0
+  sharedProfile: {fileID: 11400000, guid: 0f830d7359c34e44fb7a80c15baa88d1, type: 2}
 --- !u!1 &533341115
 GameObject:
   m_ObjectHideFlags: 0
@@ -5146,6 +5212,7 @@ MonoBehaviour:
   Instructions: {fileID: 294620954}
   Audio: {fileID: 354243821}
   OBJ: {fileID: 826656263}
+  interactbutton: {fileID: 1153083864}
   isPaused: 0
 --- !u!1 &538701017
 GameObject:
@@ -5197,6 +5264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggle: {fileID: 1054395656}
+  blur: {fileID: 508543397}
 --- !u!1 &565496679
 GameObject:
   m_ObjectHideFlags: 0
@@ -6352,7 +6420,7 @@ GameObject:
   - component: {fileID: 773402698}
   m_Layer: 5
   m_Name: Header
-  m_TagString: Untagged
+  m_TagString: Tooltips
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -6849,6 +6917,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggle: {fileID: 1054395656}
+  blur: {fileID: 508543397}
 --- !u!1 &820381584
 GameObject:
   m_ObjectHideFlags: 0
@@ -6867,7 +6936,7 @@ GameObject:
   - component: {fileID: 820381586}
   m_Layer: 5
   m_Name: Tooltip4
-  m_TagString: Untagged
+  m_TagString: Tooltips
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -8431,7 +8500,7 @@ GameObject:
   - component: {fileID: 973875652}
   m_Layer: 5
   m_Name: Tooltip Canvas 5
-  m_TagString: Untagged
+  m_TagString: Tooltips
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -9474,6 +9543,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 508543397}
+        m_TargetAssemblyTypeName: BlurController, Assembly-CSharp
+        m_MethodName: ToggleBlur
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1153083867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10098,7 +10179,7 @@ GameObject:
   - component: {fileID: 1198894723}
   m_Layer: 5
   m_Name: Tooltip5
-  m_TagString: Untagged
+  m_TagString: Tooltips
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -11030,7 +11111,7 @@ GameObject:
   - component: {fileID: 1376121641}
   m_Layer: 0
   m_Name: Tooltips
-  m_TagString: Untagged
+  m_TagString: Tooltips
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -11789,7 +11870,7 @@ GameObject:
   - component: {fileID: 1435815987}
   m_Layer: 5
   m_Name: Tooltip Canvas 1
-  m_TagString: Untagged
+  m_TagString: Tooltips
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -12087,7 +12168,7 @@ GameObject:
   - component: {fileID: 1527027910}
   m_Layer: 5
   m_Name: Tooltip Canvas 3
-  m_TagString: Untagged
+  m_TagString: Tooltips
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -14128,7 +14209,7 @@ GameObject:
   - component: {fileID: 1701061832}
   m_Layer: 5
   m_Name: Text
-  m_TagString: Untagged
+  m_TagString: Tooltips
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -14439,7 +14520,7 @@ GameObject:
   - component: {fileID: 1736924666}
   m_Layer: 5
   m_Name: Header
-  m_TagString: Untagged
+  m_TagString: Tooltips
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -14611,6 +14692,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggle: {fileID: 1054395656}
+  blur: {fileID: 508543397}
 --- !u!1 &1760781072
 GameObject:
   m_ObjectHideFlags: 0
@@ -15189,6 +15271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggle: {fileID: 1054395656}
+  blur: {fileID: 508543397}
 --- !u!1 &1925968215
 GameObject:
   m_ObjectHideFlags: 0
@@ -15202,7 +15285,7 @@ GameObject:
   - component: {fileID: 1925968218}
   m_Layer: 5
   m_Name: Header
-  m_TagString: Untagged
+  m_TagString: Tooltips
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -15561,7 +15644,7 @@ GameObject:
   - component: {fileID: 1956901876}
   m_Layer: 5
   m_Name: Header
-  m_TagString: Untagged
+  m_TagString: Tooltips
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -15730,7 +15813,7 @@ GameObject:
   - component: {fileID: 1989531606}
   m_Layer: 5
   m_Name: Tooltip Canvas 2
-  m_TagString: Untagged
+  m_TagString: Tooltips
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -17832,3 +17915,4 @@ SceneRoots:
   - {fileID: 7606660904358622372}
   - {fileID: 1114970898}
   - {fileID: 475656376}
+  - {fileID: 508543396}
