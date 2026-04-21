@@ -5,44 +5,57 @@ using UnityEngine;
 public class ImageToggle : MonoBehaviour
 {
     public bool imageActive;
-    [SerializeField] public CameraEdgePan cameraEdgePan;
+    [SerializeField] public CameraEdgePan EdgePan;
     public GameObject image;
     public GameObject TooltipCanvases;
+    public GameObject Settingsicon;
     public GameObject Instructions;
     public RandomAudioPlay Audio;
     public GameObject OBJ;
-    public GameObject Settingsicon;
+    public GameObject ExitButton;
+    public GameObject interactbutton;
 
-
-    void Start()
+    public void Displaying()
     {
-        imageActive = false;
-        image.gameObject.SetActive(false);
-    }
-
-    public void ImageDisplaying()
-    {
-        imageActive = !imageActive;
-        image.gameObject.SetActive(true);
-
-        TooltipCanvases.gameObject.SetActive(false);
-        Settingsicon.gameObject.SetActive(false);
-        Instructions.gameObject.SetActive(false);
-        OBJ.gameObject.SetActive(false);
-        cameraEdgePan.enabled = false;
-        Audio.source.volume = 0;
-
-        if (!imageActive)
+        if (image.activeInHierarchy == true)
         {
-            image.gameObject.SetActive(false);
+            image.SetActive(false);
+            EdgePan.enabled = true;
             TooltipCanvases.gameObject.SetActive(true);
             Instructions.gameObject.SetActive(true);
-            cameraEdgePan.enabled = true;
             OBJ.gameObject.SetActive(true);
             Settingsicon.gameObject.SetActive(true);
+            ExitButton.gameObject.SetActive(false);
+            interactbutton.gameObject.SetActive(true);
+            Time.timeScale = 1.0f;
             Audio.source.volume = 0.307f;
         }
+        else
+        {
+            image.SetActive(true);
+            EdgePan.enabled = false;
+            TooltipCanvases.gameObject.SetActive(false);
+            Instructions.gameObject.SetActive(false);
+            OBJ.gameObject.SetActive(false);
+            Settingsicon.gameObject.SetActive(false);
+            interactbutton.gameObject.SetActive(false);
+            ExitButton.gameObject.SetActive(true);
+            Time.timeScale = 0f;
+            Audio.source.volume = 0f;
+        }
+    }
 
-
+    public void ResumeGame()
+    {
+        image.SetActive(false);
+        EdgePan.enabled = true;
+        TooltipCanvases.gameObject.SetActive(true);
+        Instructions.gameObject.SetActive(true);
+        OBJ.gameObject.SetActive(true);
+        Settingsicon.gameObject.SetActive(true);
+        ExitButton.gameObject.SetActive(false);
+        interactbutton.gameObject.SetActive(true);
+        Time.timeScale = 1.0f;
+        Audio.source.volume = 0.307f;
     }
 }

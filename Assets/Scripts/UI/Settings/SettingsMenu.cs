@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SettingsMenu : MonoBehaviour
 {
+    public ImageToggle toggle;
 
     //public GameObject Audio;
 
@@ -19,6 +20,11 @@ public class SettingsMenu : MonoBehaviour
         }
     }
     */
+
+    public void ExitButton()
+    {
+        toggle.ResumeGame();
+    }
 
     public void Instructions()
     {

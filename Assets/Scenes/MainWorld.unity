@@ -1015,6 +1015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d0a30cb64d78a64f9473b59848c3d27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  toggle: {fileID: 1054395656}
 --- !u!1 &68762913
 GameObject:
   m_ObjectHideFlags: 0
@@ -4573,6 +4574,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 449226165}
   m_CullTransparentMesh: 1
+--- !u!1 &475656375
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 475656376}
+  m_Layer: 0
+  m_Name: DiaryEntry1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &475656376
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475656375}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 334.9279, y: 346.76868, z: -941.0282}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1054395651}
+  - {fileID: 1190257789}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &478948558
 GameObject:
   m_ObjectHideFlags: 0
@@ -5030,7 +5064,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &537435316
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5100,18 +5134,19 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 537435315}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c8c70a6fa338454a889645dbc493c93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   imageActive: 0
-  cameraEdgePan: {fileID: 435630678}
+  EdgePan: {fileID: 435630678}
   image: {fileID: 537435315}
   TooltipCanvases: {fileID: 1376121640}
   Instructions: {fileID: 294620954}
   Audio: {fileID: 354243821}
   OBJ: {fileID: 826656263}
+  isPaused: 0
 --- !u!1 &538701017
 GameObject:
   m_ObjectHideFlags: 0
@@ -5161,6 +5196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d0a30cb64d78a64f9473b59848c3d27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  toggle: {fileID: 1054395656}
 --- !u!1 &565496679
 GameObject:
   m_ObjectHideFlags: 0
@@ -6677,6 +6713,7 @@ GameObject:
   m_Component:
   - component: {fileID: 809425908}
   - component: {fileID: 809425911}
+  - component: {fileID: 809425912}
   - component: {fileID: 809425910}
   - component: {fileID: 809425909}
   m_Layer: 5
@@ -6702,7 +6739,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 977, y: 919}
+  m_AnchoredPosition: {x: 895, y: 483.99997}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &809425909
@@ -6749,9 +6786,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1054395656}
-        m_TargetAssemblyTypeName: ImageToggle, Assembly-CSharp
-        m_MethodName: ImageDisplaying
+      - m_Target: {fileID: 809425912}
+        m_TargetAssemblyTypeName: SettingsMenu, Assembly-CSharp
+        m_MethodName: ExitButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6799,6 +6836,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 809425907}
   m_CullTransparentMesh: 1
+--- !u!114 &809425912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809425907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d0a30cb64d78a64f9473b59848c3d27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggle: {fileID: 1054395656}
 --- !u!1 &820381584
 GameObject:
   m_ObjectHideFlags: 0
@@ -8598,7 +8648,7 @@ GameObject:
   - component: {fileID: 1054395653}
   - component: {fileID: 1054395652}
   m_Layer: 5
-  m_Name: DiaryEntry1
+  m_Name: DiaryToggle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8611,20 +8661,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1054395650}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1153083865}
-  - {fileID: 1190257789}
-  m_Father: {fileID: 1989531605}
+  m_Father: {fileID: 475656376}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 960, y: 540}
-  m_SizeDelta: {x: 1920, y: 1080}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!114 &1054395652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8654,10 +8703,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1980, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -8701,13 +8750,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageActive: 0
-  cameraEdgePan: {fileID: 435630678}
+  EdgePan: {fileID: 435630678}
   image: {fileID: 1190257788}
   TooltipCanvases: {fileID: 1376121640}
+  Settingsicon: {fileID: 346654542}
   Instructions: {fileID: 294620954}
   Audio: {fileID: 354243821}
   OBJ: {fileID: 801406060}
-  Settingsicon: {fileID: 346654542}
+  ExitButton: {fileID: 809425907}
+  interactbutton: {fileID: 1153083864}
 --- !u!1 &1058328711
 GameObject:
   m_ObjectHideFlags: 0
@@ -9410,7 +9461,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1153083867}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1054395656}
+        m_TargetAssemblyTypeName: ImageToggle, Assembly-CSharp
+        m_MethodName: Displaying
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1153083867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9927,7 +9990,7 @@ GameObject:
   - component: {fileID: 1190257791}
   - component: {fileID: 1190257790}
   m_Layer: 5
-  m_Name: DiaryEntry
+  m_Name: DiaryImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9940,20 +10003,20 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1190257788}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1760781073}
   - {fileID: 809425908}
-  m_Father: {fileID: 1054395651}
+  m_Father: {fileID: 475656376}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 859.78125, y: -980.71375}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 0}
 --- !u!114 &1190257790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9983,10 +10046,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1980, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -10015,7 +10078,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 30
+  m_SortingOrder: 50
   m_TargetDisplay: 0
 --- !u!1 &1198894721
 GameObject:
@@ -14547,6 +14610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d0a30cb64d78a64f9473b59848c3d27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  toggle: {fileID: 1054395656}
 --- !u!1 &1760781072
 GameObject:
   m_ObjectHideFlags: 0
@@ -14581,7 +14645,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 103, y: 439}
+  m_AnchoredPosition: {x: 21, y: 4}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1760781074
@@ -14634,7 +14698,7 @@ GameObject:
   - component: {fileID: 1824904045}
   - component: {fileID: 1824904044}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: To-Do List
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15124,6 +15188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d0a30cb64d78a64f9473b59848c3d27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  toggle: {fileID: 1054395656}
 --- !u!1 &1925968215
 GameObject:
   m_ObjectHideFlags: 0
@@ -15683,7 +15748,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 336706208}
-  - {fileID: 1054395651}
   m_Father: {fileID: 1376121641}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -17767,3 +17831,4 @@ SceneRoots:
   - {fileID: 1505487815}
   - {fileID: 7606660904358622372}
   - {fileID: 1114970898}
+  - {fileID: 475656376}
