@@ -4118,8 +4118,8 @@ Transform:
   m_GameObject: {fileID: 429151060}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -155, y: 16, z: 112.775375}
-  m_LocalScale: {x: 2.5, y: 1, z: 4}
+  m_LocalPosition: {x: -155, y: 23.27876, z: 112.775375}
+  m_LocalScale: {x: 3.5, y: 1, z: 5.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1994000525}
@@ -4277,7 +4277,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4d6bb2d019d017d449b022c3c8a37dc9, type: 2}
+  - {fileID: 2100000, guid: a359c946717fdfd4eaffbd3e250518c6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6031,7 +6031,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToFollow: {fileID: 217687896}
-  offset: {x: -620, y: 35}
+  offset: {x: -630, y: 120}
 --- !u!1 &699475467
 GameObject:
   m_ObjectHideFlags: 0
@@ -7609,6 +7609,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 832833217}
   m_CullTransparentMesh: 1
+--- !u!1 &839990111
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 839990112}
+  - component: {fileID: 839990114}
+  - component: {fileID: 839990113}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &839990112
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839990111}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalScale: {x: 1.5, y: 1.65, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 993243001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -603, y: 2}
+  m_SizeDelta: {x: -1597.2065, y: -579.0405}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &839990113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839990111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 01ded8e898f7c414d90a4d28a65dddf9, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &839990114
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839990111}
+  m_CullTransparentMesh: 1
 --- !u!1 &841515874
 GameObject:
   m_ObjectHideFlags: 0
@@ -8632,6 +8707,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 839990112}
   - {fileID: 1671494624}
   m_Father: {fileID: 217687896}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8822,12 +8898,12 @@ MonoBehaviour:
   EdgePan: {fileID: 435630678}
   image: {fileID: 1190257788}
   TooltipCanvases: {fileID: 1376121640}
-  Settingsicon: {fileID: 346654542}
   Instructions: {fileID: 294620954}
   Audio: {fileID: 354243821}
   OBJ: {fileID: 801406060}
-  ExitButton: {fileID: 809425907}
   interactbutton: {fileID: 1153083864}
+  Settingsicon: {fileID: 589358327}
+  isPaused: 0
 --- !u!1 &1058328711
 GameObject:
   m_ObjectHideFlags: 0
@@ -9531,9 +9607,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1054395656}
-        m_TargetAssemblyTypeName: ImageToggle, Assembly-CSharp
-        m_MethodName: Displaying
+      - m_Target: {fileID: 508543397}
+        m_TargetAssemblyTypeName: BlurController, Assembly-CSharp
+        m_MethodName: ToggleBlur
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9543,9 +9619,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 508543397}
-        m_TargetAssemblyTypeName: BlurController, Assembly-CSharp
-        m_MethodName: ToggleBlur
+      - m_Target: {fileID: 1054395656}
+        m_TargetAssemblyTypeName: ImageToggle, Assembly-CSharp
+        m_MethodName: OnPauseButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14069,7 +14145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.7452829, b: 0.7452829, a: 0.8039216}
+  m_Color: {r: 1, g: 0.7452829, b: 0.7452829, a: 0.9411765}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -17609,7 +17685,7 @@ PrefabInstance:
     - target: {fileID: 5491192000537826676, guid: 0b4a1440743a2e14e999a83c27073756,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.5
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 5491192000537826676, guid: 0b4a1440743a2e14e999a83c27073756,
         type: 3}
@@ -17619,7 +17695,7 @@ PrefabInstance:
     - target: {fileID: 5491192000537826676, guid: 0b4a1440743a2e14e999a83c27073756,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 4
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 5491192000537826676, guid: 0b4a1440743a2e14e999a83c27073756,
         type: 3}
@@ -17629,7 +17705,7 @@ PrefabInstance:
     - target: {fileID: 5491192000537826676, guid: 0b4a1440743a2e14e999a83c27073756,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16
+      value: 23.27876
       objectReference: {fileID: 0}
     - target: {fileID: 5666056612922340578, guid: 0b4a1440743a2e14e999a83c27073756,
         type: 3}
