@@ -66,12 +66,12 @@ public class ImageToggle : MonoBehaviour
             Time.timeScale = 0f;
             Audio.source.volume = 0f;
 
-
+            /*
             foreach (GameObject tagged in taggedObjects)
             {
                 tagged.SetActive(false);
             }
-
+            */
         }
     }
 
@@ -85,12 +85,14 @@ public class ImageToggle : MonoBehaviour
         OBJ.gameObject.SetActive(true);
         interactbutton.gameObject.SetActive(false);
         Settingsicon.gameObject.SetActive(true);
-        interactbutton.gameObject.SetActive(true);
         Time.timeScale = 1.0f;
         Audio.source.volume = 0.307f;
+
+        /* makes all object interacts true after close
         foreach (GameObject tagged in taggedObjects)
         {
             tagged.SetActive(true);
         }
+        */
     }
 }
