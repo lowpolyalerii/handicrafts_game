@@ -1839,7 +1839,7 @@ GameObject:
   - component: {fileID: 975978398}
   - component: {fileID: 975978399}
   - component: {fileID: 975978401}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: ReadWriteEnabledImageToDrawOn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1860,7 +1860,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Drawing_Layers:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 128
   Reset_Canvas_On_Play: 1
   Reset_Colour: {r: 1, g: 1, b: 1, a: 1}
   Reset_To_This_Texture_On_Play: 0
