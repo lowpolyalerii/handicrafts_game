@@ -46,7 +46,7 @@ namespace FreeDraw
 
         public void SetPenOrange()
         {
-            Color c = new Color32(255, 0, 0, 255);
+            Color c = new Color32(255, 99, 0, 1);
             c.a = Transparency;
             SetMarkerColour(c);
             Drawable.drawable.SetPenBrush();
