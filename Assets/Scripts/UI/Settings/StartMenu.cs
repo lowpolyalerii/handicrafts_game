@@ -6,6 +6,7 @@ public class StartMenu : MonoBehaviour
 {
     public GameObject toggle;
 
+
     public void Continue()
     {
         toggle.gameObject.SetActive(false);

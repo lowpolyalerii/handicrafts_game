@@ -13,6 +13,7 @@ public class PromptShuffler : MonoBehaviour
 
     public GameObject PromptToggle;
 
+    public PromptShuffler ResetCanvas;
 
     public void AccessPrompts()
     {

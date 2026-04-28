@@ -849,7 +849,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!224 &415665960
 RectTransform:
@@ -1829,7 +1829,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2151,8 +2151,8 @@ Camera:
   m_GameObject: {fileID: 734722397}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 1, g: 0.2471698, b: 0.2471698, a: 1}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 1, g: 0.9188505, b: 0.6094339, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -3194,6 +3194,7 @@ MonoBehaviour:
   text: {fileID: 915128632}
   abovetext: {fileID: 0}
   PromptToggle: {fileID: 0}
+  ResetCanvas: {fileID: 0}
 --- !u!1 &1158372696
 GameObject:
   m_ObjectHideFlags: 0
@@ -4558,10 +4559,25 @@ MonoBehaviour:
   - Draw your dream house!
   - Draw your dream pet!
   - Draw a tasty meal!
-  - Draw a tasty meal!
+  - Invent something new!
+  - Paint a picture inspired by your favorite song.
+  - What would life in another world be like?
+  - Illustrate your perfect day.
+  - Draw a new superhero.
+  - Draw using only one colour and it's tones.
+  - Draw your favourite plant.
+  - Draw your favourite animal!
+  - Draw a sparkly fairy!
+  - Draw an alien!
+  - Create a drawing with only 2 colours!
+  - "Draw a t-shirt you\u2019d love to wear!"
+  - Draw your last dream.
+  - Draw a rainy day.
+  - Draw a mythical creature!
   text: {fileID: 915128632}
   abovetext: {fileID: 608606222}
   PromptToggle: {fileID: 415665956}
+  ResetCanvas: {fileID: 0}
 --- !u!850595691 &2091317846
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -4633,8 +4649,8 @@ SceneRoots:
   - {fileID: 734722402}
   - {fileID: 975978400}
   - {fileID: 198275829}
-  - {fileID: 415665960}
   - {fileID: 606402856}
   - {fileID: 509989697}
   - {fileID: 1069560443}
   - {fileID: 1730889367}
+  - {fileID: 415665960}
