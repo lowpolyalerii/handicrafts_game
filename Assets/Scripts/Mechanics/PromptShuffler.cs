@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using FreeDraw;
 
 public class PromptShuffler : MonoBehaviour
 {
@@ -13,7 +14,9 @@ public class PromptShuffler : MonoBehaviour
 
     public GameObject PromptToggle;
 
-    public PromptShuffler ResetCanvas;
+    public Drawable ResetCanvasOnContinue;
+
+    public AudioSource AudioSource;
 
     public void AccessPrompts()
     {
@@ -23,6 +26,8 @@ public class PromptShuffler : MonoBehaviour
     public void ConfirmPrompt()
     {
         PromptToggle.gameObject.SetActive(false);
+        ResetCanvasOnContinue.ResetCanvas();
+        AudioSource.Play();
     }
 
     public void PromptShuffle()
