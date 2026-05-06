@@ -20,6 +20,10 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] public CameraEdgePan cameraEdgePan;
     public bool trigger;
 
+    private const string PORTRAIT_TAG = "portrait";
+
+    [SerializeField] private Animator portraitAnimator;
+
     private Story story;
 
 
@@ -49,6 +53,9 @@ public class DialogueManager : MonoBehaviour
             textBox.gameObject.SetActive(true);
             textBox.text = story.Continue();
             ShowChoices();
+
+            // handle tags
+            HandleTags(story.currentTags);
         }
         else
         {
@@ -56,7 +63,30 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    private void HandleTags(List<string> currentTags)
+    {
+        foreach (string tag in currentTags)
+        {
+            string[] splitTag = tag.Split(":");
+            if (splitTag.Length != 2)
+            {
+                Debug.LogError("Tag could not be appropriately parsed: " + tag);
+            }
+            string tagKey = splitTag[0].Trim();
+            string tagValue = splitTag[1].Trim();
 
+            switch (tagKey)
+            {
+                case PORTRAIT_TAG:
+                    portraitAnimator.Play(tagValue);
+                    break;
+
+                default:
+                    Debug.LogWarning("Tag came in but is not currently being handled: " + tag);
+                    break;
+            }
+        }
+    }
 
     private void ShowChoices()
     {

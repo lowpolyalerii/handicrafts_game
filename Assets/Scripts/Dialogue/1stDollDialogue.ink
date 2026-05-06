@@ -1,8 +1,8 @@
-Oh? You're already back? Nice to see you again!
+Oh? You're already back? Nice to see you again! #portrait:M_HairDownSurprise
 
-I get sad when you're gone for too long.
+I get sad when you're gone for too long. #portrait:M_HairDownSad
 
-Are you doing anything in particular today?
+Are you doing anything in particular today? #portrait:M_HairDownDefault
 
 ->My_Choices
 
@@ -11,13 +11,13 @@ Are you doing anything in particular today?
 * [ I don't feel so good today. ] -> Dot
 
 == ThisWorld ==
-Wow, yeah! You can be with us all the time, right? Why aren't you here more?
+Wow, yeah! You can be with us all the time, right? Why aren't you here more? #portrait:M_HairDownSurprise
 -> My_Choices2
 
 == Dot ==
-Oh... I'm sorry to hear that. Hopefully, I can cheer you up!
+Oh... I'm sorry to hear that. Hopefully, I can cheer you up! #portrait:M_HairDownSad
 
-I know you're here a lot anyway, but I wish I saw you even more.
+I know you're here a lot anyway, but I wish I saw you even more. #portrait:M_HairDownDefault
 -> My_Choices2
 
 == My_Choices2 ==
@@ -25,7 +25,7 @@ I know you're here a lot anyway, but I wish I saw you even more.
 * [ I wish I could too. ] -> Ask_Help2
 
 == Ask_Help1 ==
-School... you've never told me about that.
+School... you've never told me about that. #portrait:M_HairDownSurprise
 
 Well, anyway. I urgently need your help! Like MAJOR help!
 
@@ -35,7 +35,7 @@ Can you braid my hair again?
 ->Interact
 
 == Ask_Help2 ==
-Then what's the wait for?
+Then what's the wait for? #portrait:M_HairDownSurprise
 
 Well, anyway. I urgently need your help! Like MAJOR help!
 
