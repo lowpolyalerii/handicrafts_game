@@ -21,8 +21,11 @@ public class DialogueManager : MonoBehaviour
     public bool trigger;
 
     private const string PORTRAIT_TAG = "portrait";
+    private const string HAIR_TAG = "hair";
 
     [SerializeField] private Animator portraitAnimator;
+    [SerializeField] private Animator hairAnimator;
+
 
     private Story story;
 
@@ -81,6 +84,10 @@ public class DialogueManager : MonoBehaviour
                     portraitAnimator.Play(tagValue);
                     break;
 
+                case HAIR_TAG:
+                    hairAnimator.Play(tagValue);
+                    break;
+
                 default:
                     Debug.LogWarning("Tag came in but is not currently being handled: " + tag);
                     break;
@@ -98,7 +105,7 @@ public class DialogueManager : MonoBehaviour
             choiceButtons[index].gameObject.SetActive(true);
             index++;
         }
-        for(int i = index; i < 2; i++)
+        for(int i = index; i < 3; i++)
         {
             choiceButtons[i].gameObject.SetActive(false);
         }

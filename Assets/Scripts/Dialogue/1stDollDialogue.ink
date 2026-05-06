@@ -1,3 +1,5 @@
+VAR alreadychosen = 0
+
 Oh? You're already back? Nice to see you again! #portrait:M_HairDownSurprise
 
 I get sad when you're gone for too long. #portrait:M_HairDownSad
@@ -31,7 +33,7 @@ Well, anyway. I urgently need your help! Like MAJOR help!
 
 I'm getting super bored of my hairstyle... I want something fun or cute.
 
-Can you braid my hair again?
+Could you choose from a selection of these hairstyles for me?
 ->Interact
 
 == Ask_Help2 ==
@@ -39,35 +41,67 @@ Then what's the wait for? #portrait:M_HairDownSurprise
 
 Well, anyway. I urgently need your help! Like MAJOR help!
 
-I'm getting super bored of my hairstyle... I want something fun or cute.
+I'm getting super bored of my hairstyle...
 
-Can you braid my hair again?
+Which one sounds the coolest?
 ->Interact
 
 == Interact ==
-* [ Of course! ] -> Braiding // quest popup
-* [ Give me a minute. ] -> Unsure
+#portrait:M_HairDownDefault
++ [A hairstyle with a heart notif.] -> Heart
++ [A hairstyle that extudes "fabulous".] -> Regal
++ [A hairstyle with a girly flair.] -> Playful
 
-== Braiding ==
-Would you like to start now?
 
-* [ Sure. ] -> YES
-* [ Not yet. ] -> NO
+//////////////////////////////////////////////////////////////////////////////////////
+== Heart ==
+Oh my, how cutesy! I feel like a butterfly! #hair:DefaultHairIcon #portrait:M_Default
 
-== YES ==
-(This mechanic is still being worked on!) //YAY! //Trigger minigame
+Is this the one you wanted?
+-> YES_OR_NO
+
+== Regal == 
+Oh wow, how regal! I feel like an extravagant princess talking to my subjects! #hair:HairCrownIcon #portrait:M_HairCrownDefault
+
+Is this the one you wanted?
+-> YES_OR_NO
+
+== Playful == 
+Hehe, so playful! I want to keep swinging my hair! #hair:HairUpIcon #portrait:M_HairUpDefault
+
+Is this the one you wanted?
+-> YES_OR_NO
+
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+
+== YES_OR_NO ==
++ [Yep, you look great!] -> PickedHair
++ [No, this doesn't suit you.] -> Unsure
 -> DONE
-
-== NO == 
--> Unsure
 
 == Unsure ==
-(This mechanic is still being worked on!)
-//Of course! Whenever you're ready, you know where I am!
+Oh! Uh, could you pick another one for me then?
+~ alreadychosen++
+-> Interact
+
+=== Upset
+{alreadychosen == 3:
+->-> Indecisive
+}
+
+=== Indecisive
+Are you always this mean? 
+...
+Can you just choose one that looks good?
+
+-> Interact
+
 // add quest here 
 
+== PickedHair ==
+lksajkas
 -> DONE
 
-== dd ==
-* Oh are you ready now?
- ->END
+
