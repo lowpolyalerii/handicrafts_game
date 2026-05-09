@@ -28,11 +28,6 @@ public class SettingsMenu : MonoBehaviour
         blur._blurVolume.weight = blur._blurActive ? 0 : 0;
     }
 
-    public void Instructions()
-    {
-
-    }
-
     public void MainMenu()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("Main Menu");

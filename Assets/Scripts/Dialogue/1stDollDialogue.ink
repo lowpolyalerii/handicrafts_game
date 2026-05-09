@@ -17,7 +17,7 @@ Wow, yeah! You can be with us all the time, right? Why aren't you here more? #po
 -> My_Choices2
 
 == Dot ==
-Oh... I'm sorry to hear that. What's a parent? #portrait:M_HairDownSad
+Oh... I'm sorry to hear that. #portrait:M_HairDownSad
 
 I know you're here a lot anyway, but I wish I saw you even more. #portrait:M_HairDownDefault
 -> My_Choices2

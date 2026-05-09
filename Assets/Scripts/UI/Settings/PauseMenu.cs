@@ -31,6 +31,12 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+    public void MusicToggle()
+    {
+        //Audio.source.volume = 0f;
+        //Audio.source.volume = 0.307f;
+    }
+
     public void OnPauseButton()
     {
         if (!isPaused)
@@ -55,7 +61,6 @@ public class PauseMenu : MonoBehaviour
             OBJ.gameObject.SetActive(true);
             interactbutton.gameObject.SetActive(false);
             Time.timeScale = 1.0f;
-            Audio.source.volume = 0.307f;
         }
         else
         {
@@ -67,7 +72,6 @@ public class PauseMenu : MonoBehaviour
             interactbutton.gameObject.SetActive(false);
 
             Time.timeScale = 0f;
-            Audio.source.volume = 0f;
 
 
             foreach (GameObject tagged in taggedObjects)
@@ -88,7 +92,6 @@ public class PauseMenu : MonoBehaviour
         OBJ.gameObject.SetActive(true);
         interactbutton.gameObject.SetActive(false);
         Time.timeScale = 1.0f;
-        Audio.source.volume = 0.307f;
         foreach (GameObject tagged in taggedObjects)
         {
             tagged.SetActive(true);
