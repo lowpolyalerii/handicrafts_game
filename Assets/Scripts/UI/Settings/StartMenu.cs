@@ -26,6 +26,13 @@ public class StartMenu : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene("Beginning");
     }
 
+
+    public void LinkToMainWorld()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MainWorld");
+    }
+
+
     public void ExitGame()
     {
 #if UNITY_EDITOR
