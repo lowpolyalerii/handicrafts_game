@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using Unity.VisualScripting;
+using UnityEngine.UI;
 
 public class SettingsMenu : MonoBehaviour
 {
     public ImageToggle toggle;
     public BlurController blur;
+
 
     //public GameObject Audio;
 

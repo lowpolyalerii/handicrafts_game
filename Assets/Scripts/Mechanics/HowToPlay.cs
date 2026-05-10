@@ -9,6 +9,7 @@ public class HowToPlay : MonoBehaviour
     [SerializeField] string [] lines;
     [SerializeField] TextMeshProUGUI text;
     public GameObject arrows;
+    public int index = 0;
 
     Vector3 CameraoriginalPos;
     Quaternion CamerainitialRotation;
@@ -27,8 +28,16 @@ public class HowToPlay : MonoBehaviour
 
     public void DisplayNextLine()
     {
-        string promptShow = lines[Random.Range(0, lines.Length)];
+        index += 1;
+
+        if (index == lines.Length)
+        {
+            index = 0;
+        }
+
+        string promptShow = lines[index];
         text.text = promptShow;
+
     }
 
     public void Continue()

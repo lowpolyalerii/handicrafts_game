@@ -6,8 +6,7 @@ public class CameraEdgePan : MonoBehaviour
     [SerializeField] float panSpeed;
     [SerializeField] float edgeSizeInPixels;  // How many pixels away from the edge of the screen the mouse can be before panning begins
     [SerializeField] private bool useEdgeScrolling = false; //Added edge scrolling as option
-    
-    private bool dragPanMoveActive;
+
     private Vector2 lastMousePosition;
 
     bool MouseIsAtLeftEdge => Input.mousePosition.x <= edgeSizeInPixels;
@@ -19,31 +18,21 @@ public class CameraEdgePan : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(2))
         {
-            dragPanMoveActive = true;
             lastMousePosition = Input.mouseScrollDelta;
         }
-        if (Input.GetMouseButtonDown(2))
-        {
-            dragPanMoveActive = false;
-        }
-
-        if (dragPanMoveActive)
-        {
-            Vector2 mouseMovementDelta = (Vector2)Input.mousePosition - lastMousePosition;
-
-            Debug.Log(mouseMovementDelta);
-
-            lastMousePosition = Input.mousePosition;
-        }
+ 
 
         if (useEdgeScrolling)
         {
             if (MouseIsAtLeftEdge)
                 PanCameraInDirection(Vector2.left);
+
             if (MouseIsAtRightEdge)
                 PanCameraInDirection(Vector2.right);
+
             if (MouseIsAtTopEdge)
                 PanCameraInDirection(Vector2.up);
+
             if (MouseIsAtBottomEdge)
                 PanCameraInDirection(Vector2.down);
         }
