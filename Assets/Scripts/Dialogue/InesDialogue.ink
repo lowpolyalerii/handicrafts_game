@@ -1,6 +1,6 @@
 EXTERNAL LoadScene(PaintingPicture)
 
-Hello, Karimah.
+Hello, Karimah. #portrait:Ines_Default
 
 You're back again today. You don't look too well. Are you alright?
 
