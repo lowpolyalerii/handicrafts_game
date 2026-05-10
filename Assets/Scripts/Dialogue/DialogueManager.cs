@@ -5,6 +5,7 @@ using Ink.Runtime;
 using TMPro;
 using UnityEngine.UI;
 using System;
+using UnityEngine.SceneManagement;
 
 
 public class DialogueManager : MonoBehaviour
@@ -93,6 +94,10 @@ public class DialogueManager : MonoBehaviour
                     break;
             }
         }
+
+       /* story.BindExternalFunction("LoadScene", (string PaintingPicture) => {
+            SceneManager.LoadScene("PaintingPicture");
+        });*/
     }
 
     private void ShowChoices()
