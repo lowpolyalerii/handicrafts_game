@@ -11,29 +11,36 @@ public class WorldDialogue : MonoBehaviour
 
     private int index;
     public GameObject canvas;
-    public ObjectCollector collector;
+    public Collectable collected;
+    public bool firstcollect = false;
 
     void Start()
     {
         textComponent.text = string.Empty;
     }
 
-    void Update(){
-        if (collector.collected.ToString() == "1")
+    void Update()
+    {
+        if (collected.collector.ScissorsFound == true || collected.collector.PaperFound == true || collected.collector.PenFound == true || collected.collector.HairtieFound == true || collected.collector.PlushieFound == true)
         {
-            StartDialogue();
-            canvas.gameObject.SetActive(true);
-
-            if (Input.GetKeyDown(KeyCode.E))
+            firstcollect = true;
+ 
+            if (firstcollect == true)
             {
-                if (textComponent.text == lines[index])
+                StartDialogue();
+                canvas.gameObject.SetActive(true);
+
+                if (Input.GetKeyDown(KeyCode.E))
                 {
-                    NextLine();
-                }
-                else
-                {
-                    StopAllCoroutines();
-                    textComponent.text = lines[index];
+                    if (textComponent.text == lines[index])
+                    {
+                        NextLine();
+                    }
+                    else
+                    {
+                        StopAllCoroutines();
+                        textComponent.text = lines[index];
+                    }
                 }
             }
         }
