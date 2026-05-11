@@ -11,15 +11,6 @@ public class HowToPlay : MonoBehaviour
     public GameObject arrows;
     public int index = 0;
 
-    Vector3 CameraoriginalPos;
-    Quaternion CamerainitialRotation;
-
-    private void Start()
-    {
-        CameraoriginalPos = gameObject.transform.position;
-        CamerainitialRotation = gameObject.transform.rotation;
-    }
-
     public void AccessHTP()
     {
         toggle.gameObject.SetActive(true);
@@ -45,11 +36,5 @@ public class HowToPlay : MonoBehaviour
     {
         toggle.gameObject.SetActive(false);
         arrows.gameObject.SetActive(false);
-    }
-
-    public void ResetCamPos()
-    {
-        transform.position = CameraoriginalPos;
-        transform.rotation = CamerainitialRotation;
     }
 }
