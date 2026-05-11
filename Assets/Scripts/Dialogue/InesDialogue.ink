@@ -7,7 +7,7 @@ You're back again today. You don't look too well. Are you alright?
 ->My_Choices
 
 == My_Choices ==
-* [ I'm fine! ] Oh? 
+* [ I'm fine! ] Oh? #portrait:Ines_Surprise
     I see.
     -> Favour
 * [ ... ] Hmm...
@@ -15,19 +15,12 @@ You're back again today. You don't look too well. Are you alright?
     -> Favour
 
 == Favour ==
-Karimah, I have a small favour to ask of you...
+Karimah, I have a small favour to ask of you... #portrait:Ines_Default
 
 I'd love a small painting from you.
 
 You see all these beautiful surroundings you've painted for us... I'd really love it if you did one for me!
 -> My_Choices2
-
-== Dot ==
-Oh... I'm sorry to hear that. Hopefully, I can cheer you up!
-
-I know you're here a lot anyway, but I wish I saw you even more.
--> My_Choices2
-
 
 == My_Choices2 ==
 * [ Hehe thanks! I'd be happy to do that!] -> Ask_Help1
@@ -43,9 +36,9 @@ Oh, you're back!
 + [ Give me a minute. ] -> NO
 
 == Ask_Help2 ==
-I see. 
+I see. #portrait:Ines_Surprise
 
-I won't force you but it would be nice.
+I won't force you but it would be nice. #portrait:Ines_Default
 
 Could you talk to me when you feel like it? 
 ->DONE

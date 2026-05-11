@@ -28,6 +28,7 @@ public class HowToPlay : MonoBehaviour
 
     public void DisplayNextLine()
     {
+
         index += 1;
 
         if (index == lines.Length)

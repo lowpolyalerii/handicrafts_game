@@ -16,6 +16,8 @@ public class DialogueManager : MonoBehaviour
     public GameObject canvas;
     public NPCTalk npcTalk;
     public Button[] choiceButtons;
+    [SerializeField] private GameObject settingsicon;
+    [SerializeField] private TextMeshProUGUI HTPText;
     private int index;
     public float textSpeed;
     [SerializeField] public CameraEdgePan cameraEdgePan;
@@ -56,6 +58,8 @@ public class DialogueManager : MonoBehaviour
             canvas.SetActive(true);
             textBox.gameObject.SetActive(true);
             textBox.text = story.Continue();
+            settingsicon.gameObject.SetActive(false);
+            HTPText.enabled = false;
             ShowChoices();
 
             // handle tags
@@ -127,8 +131,11 @@ public class DialogueManager : MonoBehaviour
         cameraEdgePan.enabled = true;
         //trigger = false;
         //StopAllCoroutines();
+
             textBox.gameObject.SetActive(false);
             canvas.SetActive(false);
+            settingsicon.gameObject.SetActive(true);
+            HTPText.enabled = true;
             for (int i = 0; i < choiceButtons.Length; i++)
             {
                 choiceButtons[i].gameObject.SetActive(false);
