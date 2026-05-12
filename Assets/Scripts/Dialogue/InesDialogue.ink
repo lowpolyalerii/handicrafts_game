@@ -27,6 +27,8 @@ You see all these beautiful surroundings you've painted for us... I'd really lov
 * [ Do I really have to? ] -> Ask_Help2
 
 == Ask_Help1 ==
+You are so generous as always.
+
 Would you like to start now?
 {Ask_Help2 >= 1:
 Oh, you're back!
@@ -36,7 +38,7 @@ Oh, you're back!
 + [ Give me a minute. ] -> NO
 
 == Ask_Help2 ==
-I see. #portrait:Ines_Surprise
+Very blunt as always, it seems. #portrait:Ines_Surprise
 
 I won't force you but it would be nice. #portrait:Ines_Default
 
