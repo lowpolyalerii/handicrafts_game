@@ -396,7 +396,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 93.61322, w: 0}
+  m_margin: {x: 0, y: 0, z: -1.4538593, w: -34.08706}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1059,7 +1059,7 @@ MonoBehaviour:
   choiceButtons:
   - {fileID: 1265044460}
   - {fileID: 1414457034}
-  typingSpeed: 0.02
+  typingSpeed: 0.01
   trigger: 0
   continueIcon: {fileID: 843507856}
   portraitAnimator: {fileID: 0}

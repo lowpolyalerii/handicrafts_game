@@ -76,8 +76,11 @@ public class CutsceneManager : MonoBehaviour
 
     private IEnumerator DisplayLine(string line)
     {
-        //empty the dialogue text
-        textBox.text = "";
+        bool isAddingRichTextTag = false;
+
+        //set the text to the full line, but set the visible characters to 0
+        textBox.text = line;
+        textBox.maxVisibleCharacters = 0;
 
         //hide items while text is typing
         continueIcon.SetActive(false);
@@ -87,13 +90,38 @@ public class CutsceneManager : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                textBox.text = line;
+                textBox.maxVisibleCharacters = line.Length;
                 break;
             }
-            textBox.text += letter;
+
+            //check for rich text tag
+            if (letter == '<' || isAddingRichTextTag)
+            {
+                isAddingRichTextTag = true;
+                if (letter == '>')
+                {
+                    isAddingRichTextTag = false;
+                }
+            }
+
+            else
+            {
+                textBox.text += letter;
+                yield return new WaitForSeconds(typingSpeed);
+            }
+
+            textBox.maxVisibleCharacters++;
             yield return new WaitForSeconds(typingSpeed);
         }
-        continueIcon.SetActive(true);
+
+        if (story.currentChoices.Count > 0)
+        {
+            continueIcon.SetActive(false);
+        }
+        else
+        {
+            continueIcon.SetActive(true);
+        }
     }
 
     private void HandleTags(List<string> currentTags)
@@ -132,8 +160,8 @@ public class CutsceneManager : MonoBehaviour
         foreach (Choice c in choices)
         {
             choiceButtons[index].GetComponentInChildren<TextMeshProUGUI>().text = c.text;
-            continueIcon.gameObject.SetActive(false);
             choiceButtons[index].gameObject.SetActive(true);
+
             index++;
         }
         for (int i = index; i < 2; i++)

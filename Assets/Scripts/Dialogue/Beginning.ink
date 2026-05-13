@@ -1,17 +1,45 @@
- Karimah? //Knock knock
+You hear a woman's voice addressing you. It is slightly shrill, like she is on the verge of tears.
+
+It unsettles you.
+
+"Karimah"? //Knock knock
+
+"Kari, lovely?"
  
- Karimah? // Knock knock
- 
- The door rattles -> My_Choices2
+The door rattles, the person on the other side desperate to get your attention. -> My_Choices2
  
  == My_Choices2 ==
-* [ Test! ] -> Yamama
-* [ Test 2 !] -> Ask_Help
+* [ Do nothing. ] -> Do_Nothing
+* [ Say something.] -> Speak
 
-== Yamama ==
-it workss jkdsjks
--> END
+== Do_Nothing ==
+You stay silent. As usual.
 
-== Ask_Help ==
-it works!
--> END
+You don't want to open the door.
+
+
+They're arguing again. About you.
+-> Argument
+
+== Speak ==
+You try to speak, but your voice croaks way before they could hear any word.
+
+You don't want to open the door.
+
+They're arguing again. About you.
+-> Argument
+
+== Argument == 
+"Her doors locked. She's hiding from me again."
+
+"Because of you."
+
+A man's voice is heard. He seems uninterested and rather unkind.
+
+"Don't start again. I don't have time for this right now."
+
+The woman starts to cry very loudly. It rings in your ears like always, even through the door.
+
+"HOW AM I SUPPOSED TO STAY CALM WHEN EVERYTHING IS GOING TO <color=blue>@@@@</color>???"
+
+-> DONE
