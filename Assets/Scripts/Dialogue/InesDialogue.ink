@@ -35,7 +35,7 @@ Oh, you're back!
 }
 
 + [ Of course!] -> YES
-+ [ Give me a minute. ] -> NO
++ [ Not right now. ] -> NO
 
 == Ask_Help2 ==
 Very blunt as always, it seems. #portrait:Ines_Surprise

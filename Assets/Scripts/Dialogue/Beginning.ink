@@ -17,7 +17,6 @@ You stay silent. As usual.
 
 You don't want to open the door.
 
-
 They're arguing again. About you.
 -> Argument
 
@@ -40,6 +39,6 @@ A man's voice is heard. He seems uninterested and rather unkind.
 
 The woman starts to cry very loudly. It rings in your ears like always, even through the door.
 
-"HOW AM I SUPPOSED TO STAY CALM WHEN EVERYTHING IS GOING TO <color=blue>@@@@</color>???"
+"HOW AM I SUPPOSED TO STAY CALM WHEN EVERYTHING IS GOING TO $^&*???"
 
 -> DONE

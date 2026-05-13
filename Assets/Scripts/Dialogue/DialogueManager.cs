@@ -113,10 +113,13 @@ public class DialogueManager : MonoBehaviour
             choiceButtons[index].GetComponentInChildren<TextMeshProUGUI>().text = c.text;
             choiceButtons[index].gameObject.SetActive(true);
             index++;
+
+            trigger = false;
         }
         for(int i = index; i < 3; i++)
         {
             choiceButtons[i].gameObject.SetActive(false);
+            trigger = true;
         }
     }
 

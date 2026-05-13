@@ -162,11 +162,14 @@ public class CutsceneManager : MonoBehaviour
             choiceButtons[index].GetComponentInChildren<TextMeshProUGUI>().text = c.text;
             choiceButtons[index].gameObject.SetActive(true);
 
+            trigger = false;
+
             index++;
         }
         for (int i = index; i < 2; i++)
         {
             choiceButtons[i].gameObject.SetActive(false);
+            trigger = true;
         }
         textBox.gameObject.SetActive(true);
     }
