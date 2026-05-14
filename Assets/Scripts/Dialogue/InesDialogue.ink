@@ -1,3 +1,5 @@
+VAR restart = false
+
 EXTERNAL LoadScene(PaintingPicture)
 
 Hello, Karimah. #portrait:Ines_Default
@@ -27,12 +29,16 @@ You see all these beautiful surroundings you've painted for us... I'd really lov
 * [ Do I really have to? ] -> Ask_Help2
 
 == Ask_Help1 ==
-You are so generous as always.
+Thanks! #portrait:Ines_Default
 
-Would you like to start now?
-{Ask_Help2 >= 1:
+{Ask_Help2 or Ask_Help1 > 1:
 Oh, you're back!
 }
+
+You are so generous as always. #portrait:Ines_Default
+
+Would you like to start now?
+
 
 + [ Of course!] -> YES
 + [ Not right now. ] -> NO
@@ -42,9 +48,8 @@ Very blunt as always, it seems. #portrait:Ines_Surprise
 
 I won't force you but it would be nice. #portrait:Ines_Default
 
-Could you talk to me when you feel like it? 
-->DONE
--> Ask_Help1
+Could you talk to me when you feel like it? #portrait:Ines_Default
+-> DONE
 
 == YES ==
 // ~ LoadScene("PaintingPicture") //YAY! //Trigger minigame

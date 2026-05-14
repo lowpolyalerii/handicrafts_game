@@ -2272,6 +2272,8 @@ MonoBehaviour:
   textSpeed: 0
   cameraEdgePan: {fileID: 435630678}
   trigger: 0
+  storytrigger: 0
+  lineNum: 5
   portraitAnimator: {fileID: 893025980}
   hairAnimator: {fileID: 328218085}
 --- !u!114 &190265256
@@ -19259,6 +19261,8 @@ MonoBehaviour:
   textSpeed: 0
   cameraEdgePan: {fileID: 435630678}
   trigger: 0
+  storytrigger: 0
+  lineNum: 0
   portraitAnimator: {fileID: 839990115}
   hairAnimator: {fileID: 1280269463}
 --- !u!114 &1705893779

@@ -22,6 +22,11 @@ public class DialogueManager : MonoBehaviour
     public float textSpeed;
     [SerializeField] public CameraEdgePan cameraEdgePan;
     public bool trigger;
+    public bool storytrigger = false;
+    string savedJson = "hello";
+
+    int counter = 0;
+    [SerializeField] int lineNum;
 
     private const string PORTRAIT_TAG = "portrait";
     private const string HAIR_TAG = "hair";
@@ -37,14 +42,18 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         story = new Story(inkFile.text);
+        savedJson = story.state.ToJson();
     }
 
     private void Update()
     {
-        if ((Input.GetKeyUp(KeyCode.E)) && npcTalk.trigger == true)
+        if ((Input.GetKeyUp(KeyCode.E)) && npcTalk.trigger == true && storytrigger == false)
         {
             ContinueStory();
+            Debug.Log(counter);
         }
+        //else if
+            //((Input.GetKeyUp(KeyCode.E))
     }
 
 
@@ -53,9 +62,17 @@ public class DialogueManager : MonoBehaviour
     {
         if (story.canContinue)
         {
-            trigger = true;
+
+            if (counter == lineNum) 
+            {
+                savedJson = story.state.ToJson();
+            }
+            counter++;
+
+            //Debug.Log(savedJson);
+            //trigger = true;
             cameraEdgePan.enabled = false;
-            canvas.SetActive(true);
+            canvas.gameObject.SetActive(true);
             textBox.gameObject.SetActive(true);
             textBox.text = story.Continue();
             settingsicon.gameObject.SetActive(false);
@@ -68,6 +85,8 @@ public class DialogueManager : MonoBehaviour
         else
         {
             FinishDialogue();
+            story.state.LoadJson(savedJson);
+            counter = lineNum;
         }
     }
 
@@ -115,33 +134,39 @@ public class DialogueManager : MonoBehaviour
             index++;
 
             trigger = false;
+            storytrigger = true;
         }
         for(int i = index; i < 3; i++)
         {
             choiceButtons[i].gameObject.SetActive(false);
             trigger = true;
+            //storytrigger = false;
         }
     }
 
     public void SetDecision(int choiceIndex)
     {
         story.ChooseChoiceIndex(choiceIndex);
+        storytrigger = false;
         ContinueStory();
     }
 
     private void FinishDialogue()
-        {
+    {
         cameraEdgePan.enabled = true;
         //trigger = false;
         //StopAllCoroutines();
 
-            textBox.gameObject.SetActive(false);
-            canvas.SetActive(false);
-            settingsicon.gameObject.SetActive(true);
-            HTPText.enabled = true;
-            for (int i = 0; i < choiceButtons.Length; i++)
+        textBox.gameObject.SetActive(false);
+        canvas.gameObject.SetActive(false);
+        settingsicon.gameObject.SetActive(true);
+        HTPText.enabled = true;
+
+        for (int i = 0; i < choiceButtons.Length; i++)
             {
                 choiceButtons[i].gameObject.SetActive(false);
             }
-        }
+
+        storytrigger = false;
+    }
 }
