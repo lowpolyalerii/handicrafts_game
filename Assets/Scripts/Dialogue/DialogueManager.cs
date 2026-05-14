@@ -20,10 +20,11 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI HTPText;
     private int index;
     public float textSpeed;
-    [SerializeField] public CameraEdgePan cameraEdgePan;
+    [SerializeField] private CameraEdgePan cameraEdgePan;
     public bool trigger;
-    public bool storytrigger = false;
+    public bool convotrigger = false;
     string savedJson = "hello";
+    [SerializeField] bool inconvo;
 
     int counter = 0;
     [SerializeField] int lineNum;
@@ -43,17 +44,26 @@ public class DialogueManager : MonoBehaviour
     {
         story = new Story(inkFile.text);
         savedJson = story.state.ToJson();
+        inconvo = false;
     }
 
     private void Update()
     {
-        if ((Input.GetKeyUp(KeyCode.E)) && npcTalk.trigger == true && storytrigger == false)
+        if ((Input.GetKeyUp(KeyCode.E)) && npcTalk.trigger == true && convotrigger == false && inconvo == false)
+        {
+            inconvo = true;
+            ContinueStory();
+            Debug.Log(counter);
+        }
+
+        else if ((Input.GetKeyUp(KeyCode.E)) && convotrigger == false && inconvo == true)
         {
             ContinueStory();
             Debug.Log(counter);
         }
+
         //else if
-            //((Input.GetKeyUp(KeyCode.E))
+        //((Input.GetKeyUp(KeyCode.E))
     }
 
 
@@ -85,6 +95,7 @@ public class DialogueManager : MonoBehaviour
         else
         {
             FinishDialogue();
+            inconvo = false;
             story.state.LoadJson(savedJson);
             counter = lineNum;
         }
@@ -134,7 +145,7 @@ public class DialogueManager : MonoBehaviour
             index++;
 
             trigger = false;
-            storytrigger = true;
+            convotrigger = true;
         }
         for(int i = index; i < 3; i++)
         {
@@ -147,7 +158,7 @@ public class DialogueManager : MonoBehaviour
     public void SetDecision(int choiceIndex)
     {
         story.ChooseChoiceIndex(choiceIndex);
-        storytrigger = false;
+        convotrigger = false;
         ContinueStory();
     }
 
@@ -167,6 +178,6 @@ public class DialogueManager : MonoBehaviour
                 choiceButtons[i].gameObject.SetActive(false);
             }
 
-        storytrigger = false;
+        convotrigger = false;
     }
 }

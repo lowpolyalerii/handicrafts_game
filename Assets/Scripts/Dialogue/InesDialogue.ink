@@ -19,9 +19,9 @@ You're back again today. You don't look too well. Are you alright?
 == Favour ==
 Karimah, I have a small favour to ask of you... #portrait:Ines_Default
 
-I'd love a small painting from you.
+I'd love a small painting from you. #portrait:Ines_Default
 
-You see all these beautiful surroundings you've painted for us... I'd really love it if you did one for me!
+You see all these beautiful surroundings you've painted for us... I'd really love it if you did one for me! #portrait:Ines_Default
 -> My_Choices2
 
 == My_Choices2 ==
@@ -41,10 +41,10 @@ Would you like to start now?
 
 
 + [ Of course!] -> YES
-+ [ Not right now. ] -> NO
++ [ Nope. ] -> NO
 
 == Ask_Help2 ==
-Very blunt as always, it seems. #portrait:Ines_Surprise
+You're very blunt today, it seems. #portrait:Ines_Surprise
 
 I won't force you but it would be nice. #portrait:Ines_Default
 

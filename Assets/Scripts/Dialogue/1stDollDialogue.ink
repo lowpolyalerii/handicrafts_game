@@ -1,5 +1,9 @@
 EXTERNAL showing(enabled)
+{(HiddenUpset and Unsure >= 2) and (PickedHair and PickedHair2 >= 1):
+Oh... are you here to 
+}
 
+{HiddenUpset == 0 and Unsure == 0:
 Oh? You're already back? Nice to see you again! #portrait:M_HairDownSurprise
 
 I get sad when you're gone for too long. #portrait:M_HairDownSad
@@ -7,6 +11,7 @@ I get sad when you're gone for too long. #portrait:M_HairDownSad
 Are you doing anything in particular today? #portrait:M_HairDownDefault
 
 ->My_Choices
+}
 
 == My_Choices ==
 * [ This world is so much better than the other one. ] -> ThisWorld

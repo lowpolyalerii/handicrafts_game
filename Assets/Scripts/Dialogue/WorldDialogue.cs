@@ -8,7 +8,7 @@ public class WorldDialogue : MonoBehaviour
     public TextMeshProUGUI textComponent;
     public string[] lines;
     public float textSpeed;
-
+    [SerializeField] private CameraEdgePan cameraEdgePan;
     private int index;
     public GameObject canvas;
     public Collectable collected;
@@ -48,6 +48,7 @@ public class WorldDialogue : MonoBehaviour
 
     void StartDialogue()
     {
+        cameraEdgePan.enabled = false;
         index = 0;
         StartCoroutine(TypeLine());
     }
@@ -71,6 +72,7 @@ public class WorldDialogue : MonoBehaviour
         }
         else
         {
+            cameraEdgePan.enabled = true;
             gameObject.SetActive(false);
         }
     }
