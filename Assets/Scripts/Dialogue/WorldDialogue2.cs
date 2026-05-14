@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class WorldDialogue : MonoBehaviour
+public class WorldDialogue2 : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
     public string[] lines;
@@ -12,7 +12,7 @@ public class WorldDialogue : MonoBehaviour
     private int index;
     public GameObject canvas;
     public Collectable collected;
-    public bool firstcollect = false;
+    public bool collectedall = false;
 
     void Start()
     {
@@ -22,17 +22,17 @@ public class WorldDialogue : MonoBehaviour
 
     void Update()
     {
-        if (collected.collector.ScissorsFound == true || collected.collector.PaperFound == true || collected.collector.PenFound == true || collected.collector.HairtieFound == true || collected.collector.PlushieFound == true)
+        if (collected.collector.ScissorsFound == true && collected.collector.PaperFound == true && collected.collector.PenFound == true && collected.collector.HairtieFound == true && collected.collector.PlushieFound == true)
         {
-            if (firstcollect == false)
+            if (collectedall == false)
             {
-                firstcollect = true;
+                collectedall = true;
                 StartDialogue();
                 Debug.Log("Collected");
             }
         }
 
-        if (firstcollect == true)
+        if (collectedall == true)
         {
             canvas.gameObject.SetActive(true);
 
@@ -44,13 +44,12 @@ public class WorldDialogue : MonoBehaviour
                 }
                 else
                 {
-                        StopAllCoroutines();
-                        textComponent.text = lines[index];
+                    StopAllCoroutines();
+                    textComponent.text = lines[index];
                 }
             }
         }
     }
-
     void StartDialogue()
     {
         cameraEdgePan.enabled = false;
