@@ -28,12 +28,13 @@ public class WorldDialogue2 : MonoBehaviour
             {
                 collectedall = true;
                 StartDialogue();
-                Debug.Log("Collected");
+                Debug.Log("Collected all");
             }
         }
 
         if (collectedall == true)
         {
+            gameObject.SetActive(true);
             canvas.gameObject.SetActive(true);
 
             if (Input.GetKeyDown(KeyCode.E))
@@ -78,6 +79,7 @@ public class WorldDialogue2 : MonoBehaviour
         {
             cameraEdgePan.enabled = true;
             gameObject.SetActive(false);
+            canvas.gameObject.SetActive(false);
         }
     }
 }

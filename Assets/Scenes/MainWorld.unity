@@ -2729,7 +2729,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &201936406
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5849,7 +5849,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &406010257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11676,6 +11676,7 @@ GameObject:
   m_Component:
   - component: {fileID: 884137124}
   - component: {fileID: 884137125}
+  - component: {fileID: 884137126}
   m_Layer: 0
   m_Name: WorldDialogue
   m_TagString: Untagged
@@ -11717,11 +11718,33 @@ MonoBehaviour:
   - A few of my projects have been scattered around.
   - I misplaced them last time I was here.
   - If I could just find them all...
-  textSpeed: 0.05
+  textSpeed: 0.02
   cameraEdgePan: {fileID: 435630678}
   canvas: {fileID: 201936405}
   collected: {fileID: 7665794810994504499}
   firstcollect: 0
+--- !u!114 &884137126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884137123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ba4e8c006874824ca992029871d8598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 1425086965}
+  lines:
+  - Oh, I've found them all now!
+  - But I thought I threw away that diary entry...
+  - Why was it still there?
+  textSpeed: 0.02
+  cameraEdgePan: {fileID: 435630678}
+  canvas: {fileID: 201936405}
+  collected: {fileID: 7665794810994504499}
+  collectedall: 0
 --- !u!1 &889644441
 GameObject:
   m_ObjectHideFlags: 0
@@ -12380,7 +12403,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &937809391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14504,7 +14527,7 @@ Transform:
   m_GameObject: {fileID: 1178762788}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -131.1, y: 8.700005, z: 0}
+  m_LocalPosition: {x: -131.1, y: 32, z: 0}
   m_LocalScale: {x: 2.5, y: 1, z: 2.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16919,7 +16942,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -21686,9 +21709,9 @@ GameObject:
   - component: {fileID: 2029601314}
   - component: {fileID: 2029601313}
   - component: {fileID: 2029601312}
-  - component: {fileID: 2029601311}
+  - component: {fileID: 2029601320}
   m_Layer: 0
-  m_Name: Hairtie
+  m_Name: Scrunchie
   m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21702,35 +21725,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2029601309}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -80.00001, y: 63, z: 105.3}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -80.00001, y: 86.3, z: 105.3}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1131110685}
   m_Father: {fileID: 6590278247362652066}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!135 &2029601311
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2029601309}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5000001
-  m_Center: {x: 0, y: 0.00000011920929, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &2029601312
 AudioSource:
   m_ObjectHideFlags: 0
@@ -21870,9 +21872,9 @@ MonoBehaviour:
   mouseIn: 0
   mouseOut: 0
   audioSource: {fileID: 2029601312}
-  header: My Old Hairtie
+  header: My Old Scrunchie
   content: I don't really wear this anymore, but when I was younger, I would pretend
-    this was a catapult and fling it at Dad and strangers! He hated it and said it
+    it was a catapult and fling it at Dad and strangers! He hated it and said it
     was "in-ah-proh-pri-uht".
 --- !u!54 &2029601316
 Rigidbody:
@@ -21921,7 +21923,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ab5d3009e28e3a841bf3b66f0b1c0e2c, type: 2}
+  - {fileID: 2100000, guid: c885fb4d904104d4cac16b6ad352138e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -21950,7 +21952,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2029601309}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -8803937527578110353, guid: 28fd3bbe9b582b04786596fccadb1310, type: 3}
 --- !u!114 &2029601319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21963,6 +21965,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c5446d76f8dffd4d9f428efbbc200fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &2029601320
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029601309}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.5875564, y: 1.0714982, z: 3.641577}
+  m_Center: {x: 0.019083142, y: 0.02383173, z: -0.048649322}
 --- !u!1 &2035467401
 GameObject:
   m_ObjectHideFlags: 0

@@ -34,6 +34,7 @@ public class WorldDialogue : MonoBehaviour
 
         if (firstcollect == true)
         {
+            gameObject.SetActive(true);
             canvas.gameObject.SetActive(true);
 
             if (Input.GetKeyDown(KeyCode.E))
