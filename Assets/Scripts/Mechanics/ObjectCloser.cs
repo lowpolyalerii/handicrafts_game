@@ -53,12 +53,23 @@ public class ObjectCloser : MonoBehaviour
 
         if (Input.GetKey(KeyCode.D) & trigger == true)
         {
-            MoveOnZ(2);
+            currentEulerAngles += new Vector3(0, 0, 2) * Time.deltaTime * rotateSpeed;
+
+            transform.localEulerAngles = currentEulerAngles;
+        }
+
+        if (Input.GetKey(KeyCode.W) & trigger == true)
+        {
+            currentEulerAngles += new Vector3(-2, 0, 0) * Time.deltaTime * rotateSpeed;
+
+            transform.localEulerAngles = currentEulerAngles;
         }
 
         if (Input.GetKey(KeyCode.S) & trigger == true)
         {
-            MoveOnZ(2);
+            currentEulerAngles += new Vector3(2, 0, 0) * Time.deltaTime * rotateSpeed;
+
+            transform.localEulerAngles = currentEulerAngles;
         }
     }
 }
