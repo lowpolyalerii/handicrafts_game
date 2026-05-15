@@ -22,7 +22,7 @@ public class WorldDialogue2 : MonoBehaviour
 
     void Update()
     {
-        if (collected.collector.ScissorsFound == true && collected.collector.PaperFound == true && collected.collector.PenFound == true && collected.collector.HairtieFound == true && collected.collector.PlushieFound == true)
+        if (collected.collector.ScissorsFound == true & collected.collector.PaperFound == true & collected.collector.PenFound == true & collected.collector.HairtieFound == true & collected.collector.PlushieFound == true)
         {
             if (collectedall == false)
             {
