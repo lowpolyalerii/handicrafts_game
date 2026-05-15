@@ -23094,27 +23094,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1719106070252260579
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2383446478866324332}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: -0.00000047683716}
 --- !u!33 &1767844173970464644
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -23122,7 +23101,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2383446478866324332}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -2124705421725058983, guid: 5af5b30d08721e8429956fc0890369e2, type: 3}
 --- !u!1 &2024713803017602800
 GameObject:
   m_ObjectHideFlags: 0
@@ -23160,8 +23139,9 @@ GameObject:
   - component: {fileID: 4828518743502008626}
   - component: {fileID: 6922556659291287911}
   - component: {fileID: 3883354890401263607}
-  - component: {fileID: 1719106070252260579}
   - component: {fileID: 7665794810994504497}
+  - component: {fileID: 7665794810994504500}
+  - component: {fileID: 7665794810994504501}
   m_Layer: 0
   m_Name: Scissors
   m_TagString: NPC
@@ -23577,7 +23557,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 2ef1066c8856238449589a4ffe897f09, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -23907,14 +23887,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2383446478866324332}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 140, y: 17, z: 105.3}
-  m_LocalScale: {x: 10, y: 35, z: 10}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 160.6, y: 21, z: 90.2}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7362346893438916902}
   m_Father: {fileID: 6590278247362652066}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!82 &7665794810994504497
 AudioSource:
   m_ObjectHideFlags: 0
@@ -24042,6 +24022,48 @@ MonoBehaviour:
   trigger4: {fileID: 2029601315}
   trigger5: {fileID: 922365751}
   collector: {fileID: 801406065}
+--- !u!65 &7665794810994504500
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2383446478866324332}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.522284, y: 2.9003923, z: 0.3714738}
+  m_Center: {x: 0.008597374, y: 0.6163452, z: -0.022464633}
+--- !u!65 &7665794810994504501
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2383446478866324332}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.8540558, y: 3.4161994, z: 0.3714738}
+  m_Center: {x: -0.060590364, y: -2.0091588, z: -0.022464633}
 --- !u!224 &7999278666860167185
 RectTransform:
   m_ObjectHideFlags: 0
