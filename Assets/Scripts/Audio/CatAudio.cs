@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static Unity.VisualScripting.Member;
 
-public class SwansAudio : MonoBehaviour
+public class CatAudio : MonoBehaviour
 {
     public List<AudioClip> audioClips;
     public AudioClip currentClip;
@@ -12,12 +11,9 @@ public class SwansAudio : MonoBehaviour
     public float maxWaitBetweenPlays = 0.3f;
     public float waitTimeCountdown = 0.1f;
 
-    [SerializeField] private SwanTrigger swanTrigger;
-    [SerializeField] private SwanTrigger swanTrigger2;
-    [SerializeField] private SwanTrigger swanTrigger3;
-    [SerializeField] private SwanTrigger swanTrigger4;
-    [SerializeField] private SwanTrigger swanTrigger5;
-    [SerializeField] private SwanTrigger swanTrigger6;
+    [SerializeField] private CatTrigger catTrigger1;
+    [SerializeField] private CatTrigger catTrigger2;
+    [SerializeField] private CatTrigger catTrigger3;
 
 
 
@@ -28,7 +24,7 @@ public class SwansAudio : MonoBehaviour
 
     void Update()
     {
-        if (swanTrigger.trigger == true || swanTrigger2.trigger == true || swanTrigger3.trigger == true || swanTrigger4.trigger == true || swanTrigger5.trigger == true || swanTrigger6.trigger == true)
+        if (catTrigger1.trigger == true || catTrigger2.trigger == true || catTrigger3.trigger == true)
         {
             if (!source.isPlaying)
             {
@@ -47,4 +43,3 @@ public class SwansAudio : MonoBehaviour
         }
     }
 }
-
