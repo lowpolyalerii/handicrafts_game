@@ -1,3 +1,5 @@
+EXTERNAL changeScene(sceneName)
+
 You hear a woman's voice addressing you. It is slightly shrill, like she is on the verge of tears.
 
 It unsettles you.
@@ -40,5 +42,9 @@ A man's voice is heard. He seems uninterested and rather unkind.
 The woman starts to cry very loudly. It rings in your ears like always, even through the door.
 
 "HOW AM I SUPPOSED TO STAY CALM WHEN EVERYTHING IS GOING TO $^&*???"
-
+//~ changeScene("MainWorld")
 -> DONE
+
+=== function changeScene(sceneName) ===
+    // Fallback: Inky will run this, but Unity will override it
+    ~ return

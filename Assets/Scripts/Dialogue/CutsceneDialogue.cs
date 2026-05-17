@@ -6,9 +6,10 @@ using TMPro;
 using UnityEngine.UI;
 using System;
 using UnityEngine.SceneManagement;
+using UnityEditor.SearchService;
 
 
-public class CutsceneManager : MonoBehaviour
+public class CutsceneDialogue : MonoBehaviour
 {
     public TextAsset inkFile;
     public TextMeshProUGUI textBox;
@@ -22,6 +23,8 @@ public class CutsceneManager : MonoBehaviour
 
     [SerializeField] private GameObject continueIcon;
 
+    public bool externalcalled = false;
+
     private const string PORTRAIT_TAG = "portrait";
     private const string VIGNETTE_TAG = "vignette";
 
@@ -30,7 +33,6 @@ public class CutsceneManager : MonoBehaviour
 
 
     private Story story;
-
 
     // Start is called before the first frame update
     void Start()
@@ -48,10 +50,29 @@ public class CutsceneManager : MonoBehaviour
         }
     }
 
+    public void EnterDialogueMode()
+    {
+        if (externalcalled == false)
+        {
+            story.BindExternalFunction("changeScene", (string sceneName) =>
+            {
+                Debug.Log(sceneName);
+                externalcalled = true;
+            });
+        }
+
+        if (externalcalled == true)
+        {
+            return;
+        }
+    }
 
     // Update is called once per frame
     public void ContinueStory()
     {
+        //////binding function
+        //EnterDialogueMode();
+
         if (story.canContinue)
         {
             canvas.SetActive(true);
@@ -180,13 +201,18 @@ public class CutsceneManager : MonoBehaviour
         ContinueStory();
     }
 
-    private void FinishDialogue()
+    public void FinishDialogue()
     {
         //trigger = false;
         //StopAllCoroutines();
 
+        //////unbinding function
+        //story.UnbindExternalFunction("changeScene");
+        //Debug.Log("Ended");
+
         textBox.gameObject.SetActive(false);
         canvas.SetActive(false);
+
         for (int i = 0; i < choiceButtons.Length; i++)
         {
             choiceButtons[i].gameObject.SetActive(false);
