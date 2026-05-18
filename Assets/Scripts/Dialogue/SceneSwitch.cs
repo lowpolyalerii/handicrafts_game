@@ -17,4 +17,9 @@ public class SceneSwitch : MonoBehaviour
             SceneManager.LoadScene("MainWorld");
         }
     }
+
+    public void TriggerEnding()
+    {
+        SceneManager.LoadScene("Ending");
+    }
 }

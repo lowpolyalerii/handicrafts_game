@@ -4,9 +4,9 @@ You hear a woman's voice addressing you. It is slightly shrill, like she is on t
 
 It unsettles you.
 
-"Karimah"? //Knock knock
+Woman: "Karimah"? //Knock knock
 
-"Kari, lovely?"
+Woman: "Kari, lovely?"
  
 The door rattles, the person on the other side desperate to get your attention. -> My_Choices2
  
@@ -31,17 +31,17 @@ They're arguing again. About you.
 -> Argument
 
 == Argument == 
-"Her doors locked. She's hiding from me again."
+Woman: "Her door's locked. She's hiding from me again."
 
-"Because of you."
+Woman: "Because of you."
 
 A man's voice is heard. He seems uninterested and rather unkind.
 
-"Don't start again. I don't have time for this right now."
+Man: "Don't start again. I don't have time for this right now."
 
 The woman starts to cry very loudly. It rings in your ears like always, even through the door.
 
-"HOW AM I SUPPOSED TO STAY CALM WHEN EVERYTHING IS GOING TO $^&*???"
+Woman: "HOW AM I SUPPOSED TO STAY CALM WHEN EVERYTHING IS GOING TO $^&*???"
 //~ changeScene("MainWorld")
 -> DONE
 
