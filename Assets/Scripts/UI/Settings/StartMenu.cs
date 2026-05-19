@@ -20,7 +20,7 @@ public class StartMenu : MonoBehaviour
 
     [SerializeField] private GameObject newPrompt;
 
-    public void Continue()
+    public void Back()
     {
         toggle.gameObject.SetActive(false);
     }
@@ -59,6 +59,11 @@ public class StartMenu : MonoBehaviour
     public void LinktoFeedback()
     {
         Application.OpenURL("https://docs.google.com/forms/d/e/1FAIpQLSeo_pqSlYFZF_ftmWyllxSt_tSBLybxjxUXZC4GZGNF8WiYuA/viewform?usp=dialog");
+    }
+
+    public void DisclaimerToggle()
+    {
+        toggle.gameObject.SetActive(true);
     }
 
     public void StartGame()
