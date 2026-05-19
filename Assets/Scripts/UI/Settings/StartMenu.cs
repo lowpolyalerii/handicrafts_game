@@ -21,6 +21,27 @@ public class StartMenu : MonoBehaviour
 
     [SerializeField] private GameObject newPrompt;
 
+    [SerializeField] private GameObject FinalImageCanvas;
+
+    [SerializeField] private GameObject DoneCanvas;
+
+    [SerializeField] private AudioSource CameraShutter;
+
+
+
+    IEnumerator Wait()
+    {
+        FinalImageCanvas.gameObject.SetActive(false);
+        DoneCanvas.gameObject.SetActive(false);
+        SavedText.gameObject.SetActive(false);
+
+        yield return new WaitForSeconds(0.5f);
+
+        FinalImageCanvas.gameObject.SetActive(true);
+        DoneCanvas.gameObject.SetActive(true);
+        SavedText.gameObject.SetActive(true);
+    }
+
     public void Back()
     {
         toggle.gameObject.SetActive(false);
@@ -28,7 +49,8 @@ public class StartMenu : MonoBehaviour
 
     public void SaveScreenie()
     {
-        SavedText.gameObject.SetActive(true);
+        CameraShutter.Play();
+        StartCoroutine(Wait());
         prompttext.gameObject.SetActive(false);
         string folderPath = System.Environment.ExpandEnvironmentVariables("%userprofile%\\downloads\\"); // the path of your project folder
 
