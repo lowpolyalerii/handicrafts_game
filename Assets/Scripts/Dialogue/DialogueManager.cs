@@ -37,6 +37,10 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private Animator portraitAnimator;
     [SerializeField] private Animator hairAnimator;
 
+    //string M_DefaultIdle = "#portrait:M_Default";
+    //string M_HairCrownIdle = "#portrait:M_HairCrownDefault";
+    //string M_HairUpIdle = "#portrait:M_HairUpDefault";
+
 
     private Story story;
 

@@ -4094,6 +4094,9 @@ MonoBehaviour:
   prompttext: {fileID: 0}
   SavedText: {fileID: 0}
   newPrompt: {fileID: 0}
+  FinalImageCanvas: {fileID: 0}
+  DoneCanvas: {fileID: 0}
+  CameraShutter: {fileID: 0}
 --- !u!114 &274646558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25641,14 +25644,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132148487676032}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 56.3, y: -17.8, z: -93.7}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 14.97, y: -17.8, z: -93.7}
   m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 699475468}
   m_Father: {fileID: 6590278247362652066}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!4 &543450653081908140
 Transform:
   m_ObjectHideFlags: 0
@@ -26187,8 +26190,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 34.81651, y: 87.43459, z: 8.827066}
-  m_Center: {x: 11.879852, y: -56.905285, z: -1.9978597}
+  m_Size: {x: 17.51, y: 87.43459, z: 8.827066}
+  m_Center: {x: -0.3, y: -56.905285, z: -1.9978597}
 --- !u!4 &3701658955959300528
 Transform:
   m_ObjectHideFlags: 0
