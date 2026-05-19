@@ -51,6 +51,7 @@ Could you talk to me when you feel like it? #portrait:Ines_Default
 -> DONE
 
 == YES ==
+Thank you!! #portrait:Ines_Surprise 
 ~ changeScene("PaintingPicture") 
 -> DONE
 
@@ -58,9 +59,6 @@ Could you talk to me when you feel like it? #portrait:Ines_Default
 -> Ask_Help2
 // add quest here 
 -> DONE
-
-== After ==
--> Ask_Help1
 
 === function changeScene(sceneName) ===
     // Fallback: Inky will run this, but Unity will override it

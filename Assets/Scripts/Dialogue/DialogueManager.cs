@@ -106,6 +106,13 @@ public class DialogueManager : MonoBehaviour
             inconvo = false;
             story.state.LoadJson(savedJson);
             counter = lineNum;
+
+            story.BindExternalFunction("changeScene", (string sceneName) =>
+            {
+                SceneManager.LoadScene("PaintingPicture");
+                externalcalled = true;
+                FinishDialogue();
+            });
         }
     }
 
