@@ -1,6 +1,5 @@
 VAR restart = false
-
-EXTERNAL LoadScene(PaintingPicture)
+EXTERNAL changeScene(sceneName)
 
 Hello, Karimah. #portrait:Ines_Default
 
@@ -52,7 +51,7 @@ Could you talk to me when you feel like it? #portrait:Ines_Default
 -> DONE
 
 == YES ==
-// ~ LoadScene("PaintingPicture") //YAY! //Trigger minigame
+~ changeScene("PaintingPicture") 
 -> DONE
 
 == NO == 
@@ -62,3 +61,7 @@ Could you talk to me when you feel like it? #portrait:Ines_Default
 
 == After ==
 -> Ask_Help1
+
+=== function changeScene(sceneName) ===
+    // Fallback: Inky will run this, but Unity will override it
+    ~ return

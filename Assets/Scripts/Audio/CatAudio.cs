@@ -13,7 +13,6 @@ public class CatAudio : MonoBehaviour
 
     [SerializeField] private CatTrigger catTrigger1;
     [SerializeField] private CatTrigger catTrigger2;
-    [SerializeField] private CatTrigger catTrigger3;
 
 
 
@@ -24,7 +23,7 @@ public class CatAudio : MonoBehaviour
 
     void Update()
     {
-        if (catTrigger1.trigger == true || catTrigger2.trigger == true || catTrigger3.trigger == true)
+        if (catTrigger1.trigger == true || catTrigger2.trigger == true)
         {
             if (!source.isPlaying)
             {

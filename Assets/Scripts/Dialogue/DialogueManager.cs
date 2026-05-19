@@ -26,6 +26,8 @@ public class DialogueManager : MonoBehaviour
     string savedJson = "hello";
     [SerializeField] bool inconvo;
 
+    public bool externalcalled = false;
+
     int counter = 0;
     [SerializeField] int lineNum;
 
@@ -45,6 +47,12 @@ public class DialogueManager : MonoBehaviour
         story = new Story(inkFile.text);
         savedJson = story.state.ToJson();
         inconvo = false;
+
+        story.BindExternalFunction("changeScene", (string sceneName) =>
+        {
+            SceneManager.LoadScene("PaintingPicture");
+            externalcalled = true;
+        });
     }
 
     private void Update()
@@ -167,6 +175,10 @@ public class DialogueManager : MonoBehaviour
         cameraEdgePan.enabled = true;
         //trigger = false;
         //StopAllCoroutines();
+
+        //////unbinding function
+        story.UnbindExternalFunction("changeScene");
+        Debug.Log("Ended");
 
         textBox.gameObject.SetActive(false);
         canvas.gameObject.SetActive(false);
