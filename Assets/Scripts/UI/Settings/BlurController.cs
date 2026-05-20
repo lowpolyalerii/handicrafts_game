@@ -28,7 +28,37 @@ public class BlurController : MonoBehaviour
         {
             _blurVolume.weight = 0;
         }
-
         //_blurVolume.weight = _blurActive ? 1 : 0;
+    }
+
+    IEnumerator Grad1()
+    {
+        yield return new WaitForSeconds(0.2f);
+
+        _blurVolume.weight = 0.150f;
+
+        yield return new WaitForSeconds(0.2f);
+
+        _blurVolume.weight = 0.250f;
+
+        yield return new WaitForSeconds(0.2f);
+
+        _blurVolume.weight = 0.325f;
+    }
+
+
+    public void GradualBlur1()
+    {
+        StartCoroutine(Grad1());
+    }
+
+    public void GradualBlur2()
+    {
+        _blurVolume.weight = 0.500f;
+    }
+
+    public void GradualBlur3()
+    {
+        _blurVolume.weight = 0.750f;
     }
 }
