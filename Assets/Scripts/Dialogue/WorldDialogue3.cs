@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class WorldDialogue2 : MonoBehaviour
+public class WorldDialogue3 : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
     public string[] lines;
@@ -13,7 +13,6 @@ public class WorldDialogue2 : MonoBehaviour
     public GameObject canvas;
     public Collectable collected;
     public bool collectedall = false;
-    [SerializeField] private GameObject DispelButton;
 
     void Start()
     {
@@ -81,7 +80,6 @@ public class WorldDialogue2 : MonoBehaviour
             cameraEdgePan.enabled = true;
             gameObject.SetActive(false);
             canvas.gameObject.SetActive(false);
-            DispelButton.gameObject.SetActive(true);
         }
     }
 }

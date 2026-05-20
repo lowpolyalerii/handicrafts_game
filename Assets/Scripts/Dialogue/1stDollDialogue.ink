@@ -16,6 +16,7 @@ Are you doing anything in particular today? #portrait:M_HairDownDefault
 == My_Choices ==
 * [ This world is so much better than the other one. ] -> ThisWorld
 * [ I don't feel so good today. ] -> Dot
+* [ Could I talk to you in a bit? ] -> Talk_Later
 
 == ThisWorld ==
 Wow, yeah! You can be with us all the time, right? Why aren't you here more? #portrait:M_HairDownSurprise
@@ -30,6 +31,16 @@ I know you're here a lot anyway, but I wish I saw you even more. #portrait:M_Hai
 == My_Choices2 ==
 * [ My parents say I have to go to school. ] -> Ask_Help1
 * [ I wish I could too. ] -> Ask_Help2
+
+== Talk_Later ==
+Oh! #portrait:M_HairDownSurprise
+
+Of course.
+
+Please talk to me when you're ready though! #portrait:M_HairDownDefault
+
+I have a problem that I'd like for you to help me with.
+->DONE
 
 == Ask_Help1 ==
 School? Parents? I don't know what that is. #portrait:M_HairDownSurprise

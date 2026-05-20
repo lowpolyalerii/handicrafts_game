@@ -15,6 +15,9 @@ public class ImageToggle : MonoBehaviour
     public GameObject interactbutton;
     public GameObject Settingsicon;
 
+    public WorldDialogue2 Foundall;
+    public GameObject DispelToggle;
+
     GameObject[] taggedObjects = null;
 
     public bool isPaused;
@@ -49,6 +52,7 @@ public class ImageToggle : MonoBehaviour
             Instructions.gameObject.SetActive(true);
             OBJ.gameObject.SetActive(true);
             interactbutton.gameObject.SetActive(false);
+            DispelToggle.gameObject.SetActive(false);
             Settingsicon.gameObject.SetActive(true);
             Time.timeScale = 1.0f;
             Audio.source.volume = 0.307f;
@@ -62,6 +66,7 @@ public class ImageToggle : MonoBehaviour
             OBJ.gameObject.SetActive(false);
             Settingsicon.gameObject.SetActive(false);
             interactbutton.gameObject.SetActive(false);
+            DispelToggle.gameObject.SetActive(false);
 
             Time.timeScale = 0f;
             Audio.source.volume = 0f;
@@ -85,6 +90,7 @@ public class ImageToggle : MonoBehaviour
         OBJ.gameObject.SetActive(true);
         interactbutton.gameObject.SetActive(false);
         Settingsicon.gameObject.SetActive(true);
+        DispelToggle.gameObject.SetActive(false);
         Time.timeScale = 1.0f;
         Audio.source.volume = 0.307f;
 

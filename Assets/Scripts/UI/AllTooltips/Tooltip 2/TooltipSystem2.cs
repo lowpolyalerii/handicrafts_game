@@ -10,7 +10,6 @@ public class TooltipSystem2 : MonoBehaviour
 
     public static GameObject interactbutton;
 
-
     public void Awake()
     {
         current = this;
@@ -25,7 +24,6 @@ public class TooltipSystem2 : MonoBehaviour
         {
             current.tooltip2.gameObject.SetActive(true);
             interactbutton.gameObject.SetActive(true);
-
         }
         current.tooltip2.SetText(content, header);
     }
