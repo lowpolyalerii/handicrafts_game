@@ -13,13 +13,13 @@ public class WorldDialogue3 : MonoBehaviour
     public GameObject canvas;
     public Collectable collected;
     public bool collectedall = false;
-    public GameObject SecretPapers;
+    public GameObject SecretPaper1;
 
     void Start()
     {
         textComponent.text = string.Empty;
         canvas.gameObject.SetActive(false);
-        SecretPapers.gameObject.SetActive(false);
+        SecretPaper1.gameObject.SetActive(false);
     }
 
     void Update()
@@ -82,7 +82,7 @@ public class WorldDialogue3 : MonoBehaviour
             cameraEdgePan.enabled = true;
             gameObject.SetActive(false);
             canvas.gameObject.SetActive(false);
-            SecretPapers.gameObject.SetActive(true);
+            SecretPaper1.gameObject.SetActive(true);
         }
     }
 }

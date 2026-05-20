@@ -13,7 +13,6 @@ public class DispelObjects : MonoBehaviour
         FindDialogue.gameObject.SetActive(false);
         DispelButton.gameObject.SetActive(false);
     }
-
     public void DispelOBJ()
     {
         Destroy(CrumpledObject);

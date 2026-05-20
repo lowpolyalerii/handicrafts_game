@@ -15,8 +15,8 @@ public class ImageToggle : MonoBehaviour
     public GameObject interactbutton;
     public GameObject Settingsicon;
 
-    public WorldDialogue2 Foundall;
-    public GameObject DispelToggle;
+    [SerializeField] private GameObject DispelButton;
+    [SerializeField] private WorldDialogue2 itemscollected;
 
     GameObject[] taggedObjects = null;
 
@@ -52,7 +52,7 @@ public class ImageToggle : MonoBehaviour
             Instructions.gameObject.SetActive(true);
             OBJ.gameObject.SetActive(true);
             interactbutton.gameObject.SetActive(false);
-            DispelToggle.gameObject.SetActive(false);
+            DispelButton.gameObject.SetActive(false);
             Settingsicon.gameObject.SetActive(true);
             Time.timeScale = 1.0f;
             Audio.source.volume = 0.307f;
@@ -66,7 +66,7 @@ public class ImageToggle : MonoBehaviour
             OBJ.gameObject.SetActive(false);
             Settingsicon.gameObject.SetActive(false);
             interactbutton.gameObject.SetActive(false);
-            DispelToggle.gameObject.SetActive(false);
+            DispelButton.gameObject.SetActive(false);
 
             Time.timeScale = 0f;
             Audio.source.volume = 0f;
@@ -90,9 +90,13 @@ public class ImageToggle : MonoBehaviour
         OBJ.gameObject.SetActive(true);
         interactbutton.gameObject.SetActive(false);
         Settingsicon.gameObject.SetActive(true);
-        DispelToggle.gameObject.SetActive(false);
         Time.timeScale = 1.0f;
         Audio.source.volume = 0.307f;
+
+        if (itemscollected.collectedall == true)
+        {
+            DispelButton.gameObject.SetActive(true);
+        }
 
         /* makes all object interacts true after close
         foreach (GameObject tagged in taggedObjects)

@@ -8,6 +8,8 @@ public class BlurController : MonoBehaviour
     public Volume _blurVolume;
     public bool _blurActive;
 
+    [SerializeField] private GameObject HTPObject;
+
 
     public void Start()
     {
@@ -33,17 +35,49 @@ public class BlurController : MonoBehaviour
 
     IEnumerator Grad1()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.05f);
+
+        _blurVolume.weight = 0.050f;
+
+        yield return new WaitForSeconds(0.05f);
 
         _blurVolume.weight = 0.150f;
 
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.05f);
 
         _blurVolume.weight = 0.250f;
+    }
 
-        yield return new WaitForSeconds(0.2f);
+    IEnumerator Grad2()
+    {
+        yield return new WaitForSeconds(0.05f);
 
-        _blurVolume.weight = 0.325f;
+        _blurVolume.weight = 0.350f;
+
+        yield return new WaitForSeconds(0.05f);
+
+        _blurVolume.weight = 0.450f;
+
+        yield return new WaitForSeconds(0.05f);
+
+        _blurVolume.weight = 0.525f;
+    }
+
+    IEnumerator Grad3()
+    {
+        yield return new WaitForSeconds(0.05f);
+
+        _blurVolume.weight = 0.650f;
+
+        yield return new WaitForSeconds(0.05f);
+
+        _blurVolume.weight = 0.850f;
+
+        yield return new WaitForSeconds(0.05f);
+
+        _blurVolume.weight = 1;
+
+        HTPObject.gameObject.SetActive(false);
     }
 
 
@@ -54,11 +88,11 @@ public class BlurController : MonoBehaviour
 
     public void GradualBlur2()
     {
-        _blurVolume.weight = 0.500f;
+        StartCoroutine(Grad2());
     }
 
     public void GradualBlur3()
     {
-        _blurVolume.weight = 0.750f;
+        StartCoroutine(Grad3());
     }
 }
