@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
-public class WorldDialogue4 : MonoBehaviour
+public class WorldDialogue5 : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
     public string[] lines;
@@ -13,19 +14,11 @@ public class WorldDialogue4 : MonoBehaviour
     public GameObject canvas;
     public Collectable collected;
     public bool collectedall = false;
-    public GameObject SecretPaper1;
-    public GameObject discard2;
-    public GameObject SecretPaper2;
-    public GameObject discard3;
 
     void Start()
     {
         textComponent.text = string.Empty;
         canvas.gameObject.SetActive(false);
-        SecretPaper1.gameObject.SetActive(false);
-        discard2.gameObject.SetActive(false);
-        SecretPaper2.gameObject.SetActive(false);
-        discard3.gameObject.SetActive(false);
     }
 
     void Update()
@@ -86,11 +79,9 @@ public class WorldDialogue4 : MonoBehaviour
         else
         {
             cameraEdgePan.enabled = true;
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
             canvas.gameObject.SetActive(false);
-            discard2.gameObject.SetActive(false);
-            SecretPaper2.gameObject.SetActive(true);
-            discard3.gameObject.SetActive(true);
+            SceneManager.LoadScene("Ending");
         }
     }
 }

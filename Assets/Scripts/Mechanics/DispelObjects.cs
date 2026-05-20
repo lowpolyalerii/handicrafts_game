@@ -46,7 +46,7 @@ public class DispelObjects : MonoBehaviour
     
     public void DispelOBJ3()
     {
-        Destroy(CrumpledObject3);
+        CrumpledObject3.gameObject.SetActive(false);
         FindDialogue3.gameObject.SetActive(true);
         DispelButton3.gameObject.SetActive(false);
     }

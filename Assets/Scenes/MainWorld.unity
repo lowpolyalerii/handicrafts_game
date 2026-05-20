@@ -2384,7 +2384,7 @@ Transform:
   m_GameObject: {fileID: 151300418}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 896, y: 2064, z: 4459.3}
+  m_LocalPosition: {x: 896, y: 2064, z: 4567}
   m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -9311,6 +9311,7 @@ GameObject:
   m_Component:
   - component: {fileID: 589322976}
   - component: {fileID: 589322977}
+  - component: {fileID: 589322978}
   m_Layer: 0
   m_Name: FinalDestroyed
   m_TagString: Untagged
@@ -9341,7 +9342,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 589322975}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 955c25ef846430f428453ad40bee1eac, type: 3}
   m_Name: 
@@ -9356,8 +9357,30 @@ MonoBehaviour:
   canvas: {fileID: 1274554271}
   collected: {fileID: 7665794810994504499}
   collectedall: 0
-  SecretPaper1: {fileID: 0}
+  SecretPaper1: {fileID: 151300418}
   discard2: {fileID: 0}
+--- !u!114 &589322978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589322975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95dc05e6e7047094a9abe3c10a131266, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 1733269210}
+  lines:
+  - No.
+  - NO. NO. NO. NO. NO.
+  - GET OUT OF MY WORLD!
+  textSpeed: 0.02
+  cameraEdgePan: {fileID: 435630678}
+  canvas: {fileID: 1274554271}
+  collected: {fileID: 7665794810994504499}
+  collectedall: 0
 --- !u!1 &589358327
 GameObject:
   m_ObjectHideFlags: 0
@@ -9550,7 +9573,7 @@ MonoBehaviour:
   m_IsGlobal: 1
   priority: 7.2
   blendDistance: 0
-  weight: 0.325
+  weight: 0.399
   sharedProfile: {fileID: 11400000, guid: c8ddd3b2d25caef4980d43311227ddbf, type: 2}
 --- !u!4 &589362957
 Transform:
@@ -15468,6 +15491,8 @@ MonoBehaviour:
   collectedall: 0
   SecretPaper1: {fileID: 1746310342}
   discard2: {fileID: 70604541}
+  SecretPaper2: {fileID: 151300418}
+  discard3: {fileID: 1501042448}
 --- !u!1 &993243000
 GameObject:
   m_ObjectHideFlags: 0
@@ -16248,7 +16273,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Discard
+  m_text: Destroy
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d94f012f6a690a3498645ee71c646d4c, type: 2}
   m_sharedMaterial: {fileID: -5074370671147673091, guid: d94f012f6a690a3498645ee71c646d4c,
