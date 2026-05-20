@@ -41,30 +41,34 @@ public class BlurController : MonoBehaviour
 
         yield return new WaitForSeconds(0.05f);
 
-        _blurVolume.weight = 0.150f;
+        _blurVolume.weight = 0.100f;
 
         yield return new WaitForSeconds(0.05f);
 
-        _blurVolume.weight = 0.250f;
+        _blurVolume.weight = 0.150f;
     }
 
     IEnumerator Grad2()
     {
         yield return new WaitForSeconds(0.05f);
 
-        _blurVolume.weight = 0.350f;
+        _blurVolume.weight = 0.200f;
 
         yield return new WaitForSeconds(0.05f);
 
-        _blurVolume.weight = 0.450f;
+        _blurVolume.weight = 0.250f;
 
         yield return new WaitForSeconds(0.05f);
 
-        _blurVolume.weight = 0.525f;
+        _blurVolume.weight = 0.325f;
     }
 
     IEnumerator Grad3()
     {
+        yield return new WaitForSeconds(0.05f);
+
+        _blurVolume.weight = 0.450f;
+
         yield return new WaitForSeconds(0.05f);
 
         _blurVolume.weight = 0.650f;

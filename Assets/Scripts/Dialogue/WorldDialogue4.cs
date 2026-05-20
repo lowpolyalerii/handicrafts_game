@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class WorldDialogue3 : MonoBehaviour
+public class WorldDialogue4 : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
     public string[] lines;
@@ -84,8 +84,7 @@ public class WorldDialogue3 : MonoBehaviour
             cameraEdgePan.enabled = true;
             gameObject.SetActive(false);
             canvas.gameObject.SetActive(false);
-            SecretPaper1.gameObject.SetActive(true);
-            discard2.gameObject.SetActive(true);
+            discard2.gameObject.SetActive(false);
         }
     }
 }

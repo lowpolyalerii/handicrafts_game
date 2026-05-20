@@ -13,13 +13,8 @@ public class SceneSwitch : MonoBehaviour
     {
         if (DialogueBox.activeSelf == false)
         {
-            Invoke("LoadSceneDelay", 3);
+            //Invoke("LoadSceneDelay", 3);
             SceneManager.LoadScene("MainWorld");
         }
-    }
-
-    public void TriggerEnding()
-    {
-        SceneManager.LoadScene("Ending");
     }
 }
