@@ -30,12 +30,14 @@ public class CutsceneDialogue : MonoBehaviour
     [SerializeField] private Animator portraitAnimator;
     [SerializeField] private Animator vignetteAnimator;
 
+    private Scene scene;
 
     private Story story;
 
     // Start is called before the first frame update
     void Start()
     {
+        scene = SceneManager.GetActiveScene();
         story = new Story(inkFile.text);
         trigger = true;
         ContinueStory();
@@ -216,5 +218,11 @@ public class CutsceneDialogue : MonoBehaviour
         {
             choiceButtons[i].gameObject.SetActive(false);
         }
+
+        if (scene.buildIndex == (6))
+        {
+            SceneManager.LoadScene("Main Menu");
+        }
+
     }
 }

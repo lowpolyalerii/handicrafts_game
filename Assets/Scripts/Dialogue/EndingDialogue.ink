@@ -8,12 +8,6 @@ How many hours has it been?
 
 You know they care for you, but it feels like these days you don't even matter.
 
-Just another point to bring up in favour of their arguments.
-
-"Why did you buy her oranges, you know she hates oranges?"
-
-You hated them when you were 5. You're 10 now.
-
 It's ridiculous. It's so ridiculous. In the other world, these arguments cease to exist. 
 
 ...
@@ -22,30 +16,64 @@ There's you.
 -> YourChoice
 
 == YourChoice ==
-{Stay == 0:
+{(Stay == 0) && (Confront == 0):
 Your mind is frazzled. 
 
-Should you stay in your world? Should you talk to them?
+Should you stay in your world? Should you try to understand what's going on?
 }
 
-+ [STAY] -> Stay
+{(Stay == 3) && (Confront == 3):
+You're conflicted. Your mind is saying you should do both.
+
+You know you can't do both. 
+
+You need to pick one.
+}
+
+{(Stay == 4):
+-> Final_Stay
+}
+
+{(Confront == 4):
+-> Final_Confront
+}
+
++ [STAY] -> Stay 
 
 + [CONFRONT] -> Confront
 
-== Stay ==
-dffdbdbd
+== Final_Stay == 
+You've decided to stay. You don't need to know what's going on out there.
 
-bdbdffdbd
+In the comfort of your own room, you can keep playing forever, and ever, and...
 
-{Stay == 2:
-That's right. You feel safer here 
--> Stay
-}
+Ever.
 
+Thank you for playing Karimah's Paracosm. We hope you enjoyed it.
 
+//You've chose to stay. Is ignorance really bliss?
 -> DONE
 
-==Confront
-ddffdfdfbdfb
-bdbddbf
+== Final_Confront == 
+You have to find out. 
+
+You decided to confront your situation. You want to know what has happened.
+
+You don't know where it could go from here, but maybe it's best to not stay in the dark forever...
+
+Thank you for playing Karimah's Paracosm. We hope you enjoyed it.
+
+//You've chosen to leave. Do you really want to know the truth?
+-> DONE
+
+== Stay == 
+...
+{That's right. There's no reason you should exit this room. | Leaving would make you sad. You don't want to be sad, do you? | You should never leave this room. Your friends care for you, more than anyone else ever will. You have to stay. | Exactly.}
+-> YourChoice
+-> DONE
+
+== Confront ==
+...
+{You feel like you need to know the truth. | You really feel like this is something you should know. | The truth has been grating you for years now. You deserve to know, don't you? | Exactly.}
+-> YourChoice
 -> DONE

@@ -42,6 +42,16 @@ Man: "Don't start again. I don't have time for this right now."
 The woman starts to cry very loudly. It rings in your ears like always, even through the door.
 
 Woman: "HOW AM I SUPPOSED TO STAY CALM WHEN EVERYTHING IS GOING TO $^&*???"
+
+You don't know what they're talking about.
+
+Your mind feels fuzzy. Everything is fuzzy.
+
+...
+
+You don't know what thoughts are like anymore.
+
+Your friends... they're calling you.
 //~ changeScene("MainWorld")
 -> DONE
 
