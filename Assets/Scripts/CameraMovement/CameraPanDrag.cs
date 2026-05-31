@@ -1,39 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 
 public class CameraPanDrag : MonoBehaviour
 {
     private Vector3 touchStart;
-    public Camera cam;
-    public float groundZ = 0;
 
-    // initialisation
-    void Start()
-    {
-        
-    }
+    public float panSpeed = 10;       // Speed of the camera when being panned
 
-    // Update is called once per frame
-    void Update()
+    private Vector3 mouseOrigin;    // Position of cursor when mouse dragging starts
+    private bool isPanning;     // Is the camera being panned?
+
+    void FixedUpdate()
     {
+        // Get the middle mouse button
         if (Input.GetMouseButtonDown(2))
         {
-            touchStart = GetWorldPosition(groundZ);
+            // Get mouse origin
+            mouseOrigin = Input.mousePosition;
+            isPanning = true;
         }
-        if (Input.GetMouseButtonUp(2))
-        {
-            Vector3 direction = touchStart - GetWorldPosition(groundZ);
-            Camera.main.transform.position += direction;
-        }
-    }
-    private Vector3 GetWorldPosition(float z)
-    {
-        Ray mousePos = cam.ScreenPointToRay(Input.mousePosition);
-        Plane ground = new Plane(cam.transform.forward, new Vector3(0, 0, z)); ;
-        float distance;
-        ground.Raycast(mousePos, out distance);
-        return mousePos.GetPoint(distance);
-    }
 
+        // Disable movements on button release
+        if (!Input.GetMouseButton(2)) isPanning = false;
+
+        // Move the camera on it's XY plane
+        if (isPanning)
+        {
+            Vector3 pos = Camera.main.ScreenToViewportPoint(Input.mousePosition - mouseOrigin);
+
+            Vector3 move = new Vector3(pos.x * panSpeed, pos.y * panSpeed, 0);
+            transform.Translate(move, Space.Self);
+        }
+    }
 }

@@ -1,13 +1,17 @@
 EXTERNAL changeScene(sceneName)
+EXTERNAL playSound(soundName)
 
 You hear a woman's voice addressing you. It is slightly shrill, like she is on the verge of tears.
 
 It unsettles you.
 
-Woman: "Karimah"? //Knock knock
+~ playSound("Knock1")
+Woman: "Karimah"?
 
+~ playSound("Knock2")
 Woman: "Kari, lovely?"
  
+~ playSound("RattlingDoor")
 The door rattles, the person on the other side desperate to get your attention. -> My_Choices2
  
  == My_Choices2 ==
@@ -56,5 +60,9 @@ Your friends... they're calling you.
 -> DONE
 
 === function changeScene(sceneName) ===
+    // Fallback: Inky will run this, but Unity will override it
+    ~ return
+    
+=== function playSound(soundName) ===
     // Fallback: Inky will run this, but Unity will override it
     ~ return

@@ -18,6 +18,9 @@ public class CutsceneDialogue : MonoBehaviour
     [SerializeField] private float typingSpeed = 0.04f;
     public bool trigger;
 
+    public AudioSource audioSource;
+    public AudioClip[] soundClips;
+
     private Coroutine displayLineCoroutine;
 
     [SerializeField] private GameObject continueIcon;
@@ -40,31 +43,42 @@ public class CutsceneDialogue : MonoBehaviour
         scene = SceneManager.GetActiveScene();
         story = new Story(inkFile.text);
         trigger = true;
+
+        story.BindExternalFunction("changeScene", (string sceneName) =>
+        {
+            SceneManager.LoadScene("MainWorld_Stay");
+            externalcalled = true;
+        });
+
+        story.BindExternalFunction("playSound", (string soundName) =>
+        {
+            PlaySoundEffect(soundName);
+        });
+
         ContinueStory();
     }
+
+    public void PlaySoundEffect(string soundName)
+    {
+        // Search through your clips or load from Resources/Addressables
+        foreach (AudioClip clip in soundClips)
+        {
+            if (clip.name == soundName)
+            {
+                audioSource.PlayOneShot(clip);
+                return;
+            }
+        }
+        Debug.LogWarning("Sound clip not found: " + soundName);
+    }
+
+
 
     private void Update()
     {
         if ((Input.GetKeyUp(KeyCode.E)) && trigger == true)
         {
             ContinueStory();
-        }
-    }
-
-    public void EnterDialogueMode()
-    {
-        if (externalcalled == false)
-        {
-            story.BindExternalFunction("changeScene", (string sceneName) =>
-            {
-                Debug.Log(sceneName);
-                externalcalled = true;
-            });
-        }
-
-        if (externalcalled == true)
-        {
-            return;
         }
     }
 
@@ -93,6 +107,13 @@ public class CutsceneDialogue : MonoBehaviour
         else
         {
             FinishDialogue();
+
+            story.BindExternalFunction("changeScene", (string sceneName) =>
+            {
+                SceneManager.LoadScene("MainWorld_Stay");
+                externalcalled = true;
+                FinishDialogue();
+            });
         }
     }
 
@@ -208,8 +229,10 @@ public class CutsceneDialogue : MonoBehaviour
         //StopAllCoroutines();
 
         //////unbinding function
-        //story.UnbindExternalFunction("changeScene");
-        //Debug.Log("Ended");
+        story.UnbindExternalFunction("changeScene");
+        Debug.Log("Ended");
+
+        story.UnbindExternalFunction("playSound");
 
         textBox.gameObject.SetActive(false);
         canvas.SetActive(false);

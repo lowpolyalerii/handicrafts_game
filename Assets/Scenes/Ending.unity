@@ -1156,7 +1156,7 @@ MonoBehaviour:
   choiceButtons:
   - {fileID: 1265044460}
   - {fileID: 1414457034}
-  typingSpeed: 0.01
+  typingSpeed: 0.0075
   trigger: 0
   continueIcon: {fileID: 843507856}
   externalcalled: 0

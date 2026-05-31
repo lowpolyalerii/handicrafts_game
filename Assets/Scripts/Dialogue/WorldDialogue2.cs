@@ -14,6 +14,7 @@ public class WorldDialogue2 : MonoBehaviour
     public Collectable collected;
     public bool collectedall = false;
     [SerializeField] private GameObject DispelButton;
+    [SerializeField] private GameObject InteractButton;
 
     void Start()
     {
@@ -82,6 +83,7 @@ public class WorldDialogue2 : MonoBehaviour
             gameObject.SetActive(false);
             canvas.gameObject.SetActive(false);
             DispelButton.gameObject.SetActive(true);
+            InteractButton.gameObject.SetActive(true);
         }
     }
 }

@@ -1,3 +1,5 @@
+EXTERNAL changeScene(sceneName)
+
 And again, you're back in the darkness.
 
 Perhaps you could call it your "limbo".
@@ -49,9 +51,17 @@ In the comfort of your own room, you can keep playing forever, and ever, and...
 
 Ever.
 
-Thank you for playing Karimah's Paracosm. We hope you enjoyed it.
+* [STAY] -> GoBack 
+
+* [STAY] -> GoBack
 
 //You've chose to stay. Is ignorance really bliss?
+-> DONE
+
+
+==GoBack==
+Yay, you can keep playing with your toys!
+~ changeScene("MainWorld_Stay") 
 -> DONE
 
 == Final_Confront == 
@@ -77,3 +87,7 @@ Thank you for playing Karimah's Paracosm. We hope you enjoyed it.
 {You feel like you need to know the truth. | You really feel like this is something you should know. | The truth has been grating you for years now. You deserve to know, don't you? | Exactly.}
 -> YourChoice
 -> DONE
+
+=== function changeScene(sceneName) ===
+    // Fallback: Inky will run this, but Unity will override it
+    ~ return
