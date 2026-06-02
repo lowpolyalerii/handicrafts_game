@@ -7205,7 +7205,7 @@ GameObject:
   m_Component:
   - component: {fileID: 589362957}
   - component: {fileID: 589362956}
-  - component: {fileID: 589362955}
+  - component: {fileID: 589362958}
   m_Layer: 3
   m_Name: GradualBlur
   m_TagString: Untagged
@@ -7213,21 +7213,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &589362955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 589362954}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3af6fe68bf526e64f91293e91e562f71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _blurVolume: {fileID: 589362956}
-  _blurActive: 0
-  HTPObject: {fileID: 294620954}
 --- !u!114 &589362956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7260,6 +7245,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1484986045}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &589362958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589362954}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19a5d2ef0963024b8a62f23fd14f433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _blurVolume: {fileID: 589362956}
 --- !u!1 &615882008
 GameObject:
   m_ObjectHideFlags: 0

@@ -17,6 +17,7 @@ public class WorldDialogue4 : MonoBehaviour
     public GameObject discard2;
     public GameObject SecretPaper2;
     public GameObject discard3;
+    public GameObject interactbutton3;
 
     void Start()
     {
@@ -26,6 +27,7 @@ public class WorldDialogue4 : MonoBehaviour
         discard2.gameObject.SetActive(false);
         SecretPaper2.gameObject.SetActive(false);
         discard3.gameObject.SetActive(false);
+        interactbutton3.gameObject.SetActive(false);
     }
 
     void Update()
@@ -91,6 +93,7 @@ public class WorldDialogue4 : MonoBehaviour
             discard2.gameObject.SetActive(false);
             SecretPaper2.gameObject.SetActive(true);
             discard3.gameObject.SetActive(true);
+            interactbutton3.gameObject.SetActive(true);
         }
     }
 }

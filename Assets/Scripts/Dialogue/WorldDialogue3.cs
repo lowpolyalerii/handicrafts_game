@@ -15,6 +15,7 @@ public class WorldDialogue3 : MonoBehaviour
     public bool collectedall = false;
     public GameObject SecretPaper1;
     public GameObject discard2;
+    public GameObject interactbutton2;
 
     void Start()
     {
@@ -22,6 +23,7 @@ public class WorldDialogue3 : MonoBehaviour
         canvas.gameObject.SetActive(false);
         SecretPaper1.gameObject.SetActive(false);
         discard2.gameObject.SetActive(false);
+        interactbutton2.gameObject.SetActive(false);
     }
 
     void Update()
@@ -86,6 +88,7 @@ public class WorldDialogue3 : MonoBehaviour
             canvas.gameObject.SetActive(false);
             SecretPaper1.gameObject.SetActive(true);
             discard2.gameObject.SetActive(true);
+            interactbutton2.gameObject.SetActive(true);
         }
     }
 }

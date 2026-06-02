@@ -8,6 +8,9 @@ using UnityEngine.UI;
 public class SettingsMenu : MonoBehaviour
 {
     public ImageToggle toggle;
+    public ImageToggle2 toggle2;
+    public ImageToggle3 toggle3;
+
     public BlurController blur;
 
 
@@ -29,6 +32,18 @@ public class SettingsMenu : MonoBehaviour
     public void ExitButton()
     {
         toggle.ResumeGame();
+        blur._blurVolume.weight = blur._blurActive ? 0 : 0;
+    }
+
+    public void ExitButton2()
+    {
+        toggle2.ResumeGame();
+        blur._blurVolume.weight = blur._blurActive ? 0 : 0;
+    }
+
+    public void ExitButton3()
+    {
+        toggle3.ResumeGame();
         blur._blurVolume.weight = blur._blurActive ? 0 : 0;
     }
 

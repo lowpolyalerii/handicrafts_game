@@ -445,6 +445,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 02b3303274f063a4daa84fc7498e7fda, type: 3}
   - {fileID: 8300000, guid: ab48f3b52d78e1845b57bd66354da9ae, type: 3}
   - {fileID: 8300000, guid: c289e8a63445d8c4398efc5e7d6f98f2, type: 3}
+  - {fileID: 8300000, guid: 780ceda493e69ec459310ddca6eabfb6, type: 3}
   continueIcon: {fileID: 1415520344}
   externalcalled: 0
   portraitAnimator: {fileID: 0}

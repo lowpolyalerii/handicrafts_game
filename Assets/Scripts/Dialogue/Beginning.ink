@@ -47,6 +47,7 @@ The woman starts to cry very loudly. It rings in your ears like always, even thr
 
 Woman: "HOW AM I SUPPOSED TO STAY CALM WHEN EVERYTHING IS GOING TO $^&*???"
 
+~ playSound("HeartbeatSoundEffect")
 You don't know what they're talking about.
 
 Your mind feels fuzzy. Everything is fuzzy.
