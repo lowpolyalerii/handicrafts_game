@@ -32,4 +32,16 @@ public class RandomAudioPlay : MonoBehaviour
             }
         }
     }
+
+
+    public void FirstClick()
+    {
+        source.pitch = 0.9f;
+    }
+
+    public void SecondClick()
+    {
+        source.pitch = 0.8f;
+    }
+
 }

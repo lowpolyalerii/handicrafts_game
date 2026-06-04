@@ -1,12 +1,19 @@
 EXTERNAL changeScene(sceneName)
+EXTERNAL playSound(soundName)
 
 And again, you're back in the darkness.
 
-Perhaps you could call it your "limbo".
+Perhaps you could call this your "limbo".
 
-The voices.
+Those diary pages... You thought you threw them away weeks ago, or was it months?
 
-How many hours has it been?
+You wish you never found it. You wish you never wrote it. You wish you never read it.
+
+All you wanted was to play with your friends.
+
+Was your brain trying to tell you something? Should you listen?
+
+And the voices. How many hours has it been?
 
 You know they care for you, but it feels like these days you don't even matter.
 
@@ -29,15 +36,18 @@ You're conflicted. Your mind is saying you should do both.
 
 You know you can't do both. 
 
+~ playSound("HeartbeatSoundEffect")
 You need to pick one.
 }
 
 {(Stay == 4):
+~ playSound("HeartbeatSoundEffect")
 -> Final_Stay
 }
 
 {(Confront == 4):
--> Final_Confront
+~ playSound("HeartbeatSoundEffect")
+-> Final_Confront 
 }
 
 + [STAY] -> Stay 
@@ -60,7 +70,7 @@ Ever.
 
 
 ==GoBack==
-Yay, you can keep playing with your toys!
+You don't need to know. You can keep playing!
 ~ changeScene("MainWorld_Stay") 
 -> DONE
 
@@ -89,5 +99,9 @@ Thank you for playing Karimah's Paracosm. We hope you enjoyed it.
 -> DONE
 
 === function changeScene(sceneName) ===
+    // Fallback: Inky will run this, but Unity will override it
+    ~ return
+    
+=== function playSound(soundName) ===
     // Fallback: Inky will run this, but Unity will override it
     ~ return

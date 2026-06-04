@@ -88,7 +88,7 @@ public class ImageToggle : MonoBehaviour
         TooltipCanvases.gameObject.SetActive(true);
         Instructions.gameObject.SetActive(true);
         OBJ.gameObject.SetActive(true);
-        interactbutton.gameObject.SetActive(false);
+        interactbutton.gameObject.SetActive(true);
         Settingsicon.gameObject.SetActive(true);
         Time.timeScale = 1.0f;
         Audio.source.volume = 0.307f;
