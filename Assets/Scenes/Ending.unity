@@ -1157,7 +1157,7 @@ MonoBehaviour:
   choiceButtons:
   - {fileID: 1265044460}
   - {fileID: 1414457034}
-  typingSpeed: 0.0075
+  typingSpeed: 0.007
   trigger: 0
   audioSource: {fileID: 1147867557}
   soundClips:

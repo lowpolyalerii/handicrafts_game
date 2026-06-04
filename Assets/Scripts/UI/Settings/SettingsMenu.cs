@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SettingsMenu : MonoBehaviour
 {
@@ -49,7 +50,7 @@ public class SettingsMenu : MonoBehaviour
 
     public void MainMenu()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene("Main Menu", LoadSceneMode.Additive);
     }
 
     public void ExitGame()
